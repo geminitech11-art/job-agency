@@ -1,9 +1,7 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import ClientProviders from '@/components/ClientProviders';
 import './globals.css';
 
 export function generateStaticParams() {
@@ -26,16 +24,15 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const messages = await getMessages();
+  // Import messages directly to avoid headers() access
+  const messages = (await import(`@/messages/${locale}.json`)).default;
 
   return (
     <html lang={locale}>
       <body className="min-h-screen bg-gray-50">
-        <NextIntlClientProvider messages={messages}>
-          <Navigation />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
+        <ClientProviders messages={messages}>
+          {children}
+        </ClientProviders>
       </body>
     </html>
   );

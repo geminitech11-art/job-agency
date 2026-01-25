@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { useState, useMemo } from 'react';
 
+export const dynamic = 'force-dynamic';
+
 // This would come from a database in a real app
 const jobs: Record<string, any> = {
   'elektrikari-nemecko': {

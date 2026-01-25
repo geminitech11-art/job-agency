@@ -5,6 +5,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { jobs } from '@/lib/jobs';
 
+export const dynamic = 'force-dynamic';
+
 export default function JobsPage() {
   const t = useTranslations('jobs');
   const locale = useLocale();

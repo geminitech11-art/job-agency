@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { getOpenJobsCount } from '@/lib/jobs';
 
+export const dynamic = 'force-dynamic';
+
 export default function ContactPage() {
   const t = useTranslations('contact');
   const locale = useLocale();

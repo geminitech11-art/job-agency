@@ -11,12 +11,16 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+export const dynamic = 'force-static';
+
 export default async function HomePage({
   params: { locale }
 }: {
   params: { locale: string };
 }) {
+  // MUST be called before next-intl APIs
   setRequestLocale(locale);
+
   const t = await getTranslations('home');
   const openJobsCount = getOpenJobsCount();
 

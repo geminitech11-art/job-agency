@@ -10,6 +10,8 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+export const dynamic = 'force-static';
+
 export default async function LocaleLayout({
   children,
   params: { locale }
@@ -17,11 +19,13 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  // MUST be first
+  setRequestLocale(locale);
+  
   if (!locales.includes(locale as any)) {
     notFound();
   }
 
-  setRequestLocale(locale);
   const messages = await getMessages();
 
   return (

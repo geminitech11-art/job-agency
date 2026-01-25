@@ -5,6 +5,11 @@ import { getOpenJobsCount, jobs } from '@/lib/jobs';
 import FAQSection from '@/components/FAQSection';
 import JobCarousel from '@/components/JobCarousel';
 import ContactFormSection from '@/components/ContactFormSection';
+import { locales } from '@/i18n';
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export default async function HomePage({
   params: { locale }

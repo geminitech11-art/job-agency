@@ -1,0 +1,311 @@
+{
+  "nav": {
+    "home": "Domov",
+    "about": "O nás",
+    "jobs": "Pracovné ponuky",
+    "faq": "Časté otázky",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "hero": {
+      "title": {
+        "line1": "Pracujte na",
+        "line2": "projektoch v",
+        "line3": "zahraničí"
+      },
+      "tagline": "Váš úspech začína s nami.",
+      "cta": {
+        "primary": "Pracovné ponuky",
+        "secondary": "O nás"
+      },
+      "stats": "Za 15 rokov sme našli vhodnú prácu pre viac ako 1000 ľudí",
+      "current": {
+        "title": "AKTUÁLNE",
+        "count": "19",
+        "label": "voľných ponúk"
+      }
+    },
+    "title": "Váš kariérny partner",
+    "subtitle": "Spájame talentovaných profesionálov s výnimočnými príležitosťami",
+    "cta": "Prezrieť ponuky",
+    "features": {
+      "title": "Prečo si vybrať nás",
+      "feature1": {
+        "title": "Odborné poradenstvo",
+        "description": "Naš skúsený tím poskytuje personalizované kariérne poradenstvo"
+      },
+      "feature2": {
+        "title": "Široká sieť",
+        "description": "Prístup k popredným zamestnávateľom v rôznych odvetviach"
+      },
+      "feature3": {
+        "title": "Rýchle umiestnenie",
+        "description": "Rýchly proces párovania, aby ste mohli začať čím skôr"
+      }
+    },
+    "benefits": {
+      "benefit1": {
+        "title": "Nástup už do 5 dní",
+        "description": "Naša spoločnosť ponúka komplexnú podporu a poradenstvo pred nástupom, aj počas trvania celej spolupráce."
+      },
+      "benefit2": {
+        "title": "Dlhodobá spolupráca",
+        "description": "Pri obojstrannej spokojnosti pokračujete v nadväzujúcich projektoch, čo vám zaručuje nepretržitý príjem."
+      },
+      "benefit3": {
+        "title": "Férové ohodnotenie",
+        "description": "Vaša odmena je pravidelne vyplácaná podľa dohody a vieme poskytnúť možnosť zálohovej platby."
+      },
+      "benefit4": {
+        "title": "Hradené ubytovanie",
+        "description": "Ubytovanie je starostlivo vyberané tak, aby vyhovovalo vašim potrebám a umožnilo dlhodobý pobyt."
+      }
+    }
+  },
+  "about": {
+    "title": "O našej agentúre",
+    "description": "Sme popredná agentúra na zaraďovanie zamestnancov, ktorá sa venuje spájaniu talentovaných profesionálov s ich vysnívanými kariérami. S ročnými skúsenosťami v odvetví náboru rozumieme výzvam, ktorým čelia uchádzači o zamestnanie, a neúnavne pracujeme na tom, aby sme ich spojili so správnymi príležitosťami.",
+    "mission": "Naša misia",
+    "missionText": "Premostiť medzeru medzi talentovanými profesionálmi a výnimočnými zamestnávateľmi, vytváraním vzájomne prospešných partnerstiev, ktoré podporujú úspech.",
+    "values": "Naše hodnoty",
+    "value1": "Integrita a transparentnosť vo všetkých našich jednaniach",
+    "value2": "Záväzok k excelencii a nepretržitému zlepšovaniu",
+    "value3": "Rešpekt k diverzite a inklúzii"
+  },
+  "contact": {
+    "title": "Kontaktujte nás ešte dnes",
+    "subtitle": "Potrebné informácie o spolupráci, turnusoch a zárobku na jednom mieste.",
+    "form": {
+      "name": "Meno a Priezvisko*",
+      "phone": "Telefónne číslo*",
+      "email": "E-mail*",
+      "profession": "Vybrať profesiu*",
+      "startDate": "Termín nástupu*",
+      "send": "Odoslať správu",
+      "sending": "Odosielanie...",
+      "success": "Ďakujeme! Vaša správa bola úspešne odoslaná. Čoskoro vás budeme kontaktovať.",
+      "error": "Vyskytla sa chyba. Skúste to prosím znova alebo nás kontaktujte priamo."
+    },
+    "stats": {
+      "title": "Za 15 rokov sme našli vhodnú prácu pre viac ako 1000 ľudí"
+    },
+    "current": {
+      "title": "AKTUÁLNE",
+      "projects": "voľných projektov"
+    },
+    "info": {
+      "title": "Kontaktné informácie",
+      "email": "Email",
+      "phone": "Telefón",
+      "address": "Adresa",
+      "hours": "Úradné hodiny"
+    },
+    "hours": {
+      "weekdays": "Pondelok - Piatok: 9:00 - 18:00",
+      "saturday": "Sobota: 10:00 - 16:00"
+    }
+  },
+  "faq": {
+    "title": "Často kladené otázky a potrebné informácie",
+    "subtitle": "Všetko, čo potrebujete vedieť o práci na živnosť v Nemecku a v Rakúsku.",
+    "tagline": "Váš úspech začína s nami.",
+    "categories": {
+      "all": "Všetko",
+      "general": "Všeobecné otázky",
+      "before": "Pred nástupom",
+      "payment": "Odmena a ubytovanie",
+      "work": "Počas práce"
+    },
+    "items": {
+      "general": {
+        "q1": {
+          "question": "Kde nájdem aktuálne pracovné ponuky?",
+          "answer": "Všetky naše aktuálne projekty a zákazky na živnosť nájdete v časti pracovné ponuky. Ponuky aktualizujeme každý týždeň. Ak ste zatiaľ nenašli vhodnú zákazku pre vás, čoskoro sa tam môže objaviť. Prípadne nás môžete kontaktovať s vašou predstavou, a spoločne nájdeme projekt vhodný pre vás."
+        },
+        "q2": {
+          "question": "Musím mať živnosť, ak sa chcem uchádzať o zákazku?",
+          "answer": "Áno, osvedčenie o živnostenskom oprávnení (živnostenský list) je potrebné, pretože na projektoch pracujete ako samostatný subdodávateľ, nie ako zamestnanec. Taktiež odmena za vykonanú prácu vám bude vyplatená na základe vystavenej faktúry. Živnosť musí byť aktívna najmenej dve mesiace."
+        },
+        "q3": {
+          "question": "Môžem si vybrať zákazku podľa miesta a doby trvania?",
+          "answer": "Áno, podľa dopytu vieme zohnať aj zákazku vo vašej preferovanej lokalite. Dajte nám vedieť, kde by vám vyhovovalo pracovať a my zistíme aktuálne možnosti. Ponuku práce máme celoročne. V prípade záujmu a obojstrannej spokojnosti je možné spolupracovať aj dlhodobo, aby ste mali stabilný príjem. Ale v ponuke máme aj krátkodobé zákazky."
+        },
+        "q4": {
+          "question": "Aké sú najčastejšie druhy zákaziek, ktoré ponúkate, a ako dlho trvá, kým začnem pracovať?",
+          "answer": "Väčšinou u nás nájdete práce týkajúce sa elektroinštalácií, montáží fasádnych konštrukcií a panelov alebo vodoinštalácií v Nemecku a Rakúsku. Po odoslaní všetkých potrebných dokumentov a schválenia od zahraničnej firmy je možný pracovný nástup ihneď, teda celý proces je naozaj rýchly."
+        }
+      },
+      "before": {
+        "q1": {
+          "question": "Prečo si mám vybrať práve vás?",
+          "answer": "Máme bohaté skúsenosti a za sebou stovky úspešne dokončených projektov v Nemecku a v Rakúsku. Naša dlhoročná prax z nás robí spoľahlivého a overeného partnera. Poskytujeme komplexnú podporu počas celej doby projektu. Od výberu ideálnych ponúk, cez asistenciu pri zabezpečení ubytovania, až po priebežnú podporu počas celej zákazky."
+        },
+        "q2": {
+          "question": "Aké dokumenty potrebujem?",
+          "answer": "Na spoluprácu budeme od vás potrebovať životopis, živnostenský list, kartičku poistenca platnú v rámci EÚ, formulár PDA1 od Sociálnej poisťovne. Elektrikári a zvárači budú potrebovať aj konkrétne osvedčenia (vyhlášku, certifikát), ktoré dokazujú spôsobilosť danú prácu vykonávať."
+        },
+        "q3": {
+          "question": "Prečo treba formulár PDA1?",
+          "answer": "Formulár PDA1 od Sociálnej poisťovne potvrdzuje, že aj počas prác v zahraničí zostávate poistencom SR a odvody platíte na Slovensku. Tento formulár vám vystaví príslušná pobočka Sociálnej poisťovne na základe zmluvy o dielo alebo objednávky. Sociálna poisťovňa väčšinou vystaví formulár do 45 dní. S jeho vybavením vám radi pomôžeme."
+        },
+        "q4": {
+          "question": "Vaša ponuka ma zaujala. Čo ďalej?",
+          "answer": "Super. Prostredníctvom formulára alebo na e-mail nám pošlite svoje meno, kontakt, profesiu, prípadne konkrétnu ponuku a nezabudnite priložiť potrebné dokumenty (životopis, živnostenské oprávnenie, formulár A1, osvedčenia). Následne vás budeme kontaktovať s ďalším postupom."
+        },
+        "q5": {
+          "question": "Vyžadujete pred nástupom pracovný pohovor?",
+          "answer": "Áno, pred nástupom do práce je u nás potrebné absolvovať osobné stretnutie, aby pred začatím spolupráce mali obe strany dostatok informácií. Po dohode je možný aj telefonický rozhovor, počas ktorého si preberieme všetky detaily spolupráce. Tento rozhovor nie je dlhý a slúži k dobrej informovanosti všetkých strán."
+        }
+      },
+      "payment": {
+        "q1": {
+          "question": "Kedy a ako dostanem peniaze?",
+          "answer": "Fakturujete po dvoch odpracovaných týždňoch na základe odpracovaných hodín, splatnosť faktúr je 14 pracovných dní. Z tohto dôvodu je nevyhnutná živnosť pre vykonávanie práce. My zabezpečíme, aby ste vždy dostali svoju odmenu včas a v plnej výške."
+        },
+        "q2": {
+          "question": "Ako je to s ubytovaním?",
+          "answer": "Pomôžeme vám zabezpečiť ubytovanie v blízkosti pracoviska. Väčšina projektov má zabezpečené ubytovanie, ktoré je zahrnuté v podmienkach zákazky. V prípade, že ubytovanie nie je súčasťou zákazky, pomôžeme vám nájsť vhodné ubytovanie v danej lokalite."
+        }
+      },
+      "work": {
+        "q1": {
+          "question": "Môžem pracovať sám alebo musím byť v partii?",
+          "answer": "Záleží na type zákazky. Niektoré zákazky vyžadujú prácu v partii, iné môžeme umiestniť ako jednotlivca do partie. Pracovná prax je podmienkou, v prípade, že nemáte potrebnú prax, je možné nastúpiť iba v partii spolu so skúsenejším kolegom. Vyučenie je potrebné v konkrétnom odbore pre danú zákazku (elektrikári, zámočníci, fasádnici…)."
+        },
+        "q2": {
+          "question": "Musím vedieť po nemecky, a môžem pracovať aj bez skúseností s prácou v zahraničí?",
+          "answer": "Aspoň jeden z dvojice alebo jeden z partie musí ovládať nemecký jazyk, keďže je potrebné sa dorozumieť v práci. Ponúkame príležitosť aj pre začiatočníkov v práci v zahraničí, musia však byť súčasťou už zabehnutej partie."
+        },
+        "q3": {
+          "question": "Čo ak sa podmienky zákazky počas práce zmenia?",
+          "answer": "Dohodnuté podmienky sa počas trvania práce na zákazke nemenia. Môže sa však zmeniť miesto výkonu práce (stavba), o tom ale budete včas informovaný. V prípade, ak nebudete môcť dokončiť zákazku alebo sa premiestniť na inú, spolupráca sa ukončí dohodou. Odmena bude vyplatená podľa zmluvných podmienok."
+        },
+        "q4": {
+          "question": "Na koho sa mám obrátiť v prípade akéhokoľvek problému?",
+          "answer": "Radi vám poskytneme kompletnú podporu, či už s administratívou, vybavením dokumentov alebo komunikáciou so zahraničnými partnermi. Ak sa vyskytne nejaký problém, riešime ho urgentne a ku spokojnosti všetkých strán tak, aby ste sa mohli sústrediť na svoju prácu a nič vás nevyrušovalo."
+        }
+      }
+    },
+    "cta": {
+      "title": "Nenašli ste odpoveď na vašu otázku?",
+      "description": "Ak ste nenašli odpoveď na vašu otázku, pokojne nás kontaktujte, a my vám vašu otázku radi zodpovieme.",
+      "button": "Kontaktovať nás"
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "O spoločnosti",
+      "home": "Domov",
+      "about": "O nás",
+      "contact": "Kontakt"
+    },
+    "info": {
+      "title": "Dôležité informácie",
+      "jobs": "Pracovné ponuky",
+      "faq": "Časté otázky",
+      "tax": "Oslobodenie od dane",
+      "accommodation": "Ubytovanie",
+      "privacy": "Ochrana osobných údajov",
+      "cookies": "Zásady používania Cookies"
+    },
+    "contact": {
+      "title": "Kontakty"
+    },
+    "copyright": "Všetky práva vyhradené"
+  },
+  "jobs": {
+    "breadcrumb": {
+      "home": "Domov",
+      "jobs": "Pracovné ponuky"
+    },
+    "hero": {
+      "title": "Najlepšie pracovné ponuky v Nemecku a Rakúsku",
+      "description": "Pravidelne pre vás hľadáme a aktualizujeme zaujímavé zákazky v Nemecku a Rakúsku.",
+      "cta": "Kontaktujte nás ihneď"
+    },
+    "filter": {
+      "button": "Filter",
+      "country": "Krajina",
+      "location": "Lokalita",
+      "profession": "Profesia"
+    },
+    "title": "Pracovné ponuky",
+    "subtitle": "Všetky ponuky",
+    "search": "Hľadať prácu...",
+    "filter": "Filtrovať podľa kategórie",
+    "noJobs": "Momentálne nie sú k dispozícii žiadne ponuky práce. Skúste to prosím neskôr.",
+    "apply": "Aplikovať teraz",
+    "details": "Zobraziť detaily",
+    "salary": "Odmena",
+    "startDate": "Začiatok",
+    "moreInfo": "Viac informácií",
+    "open": "OTVORENÉ",
+    "closed": "UZATVORENÉ"
+  },
+  "jobDetail": {
+    "breadcrumb": {
+      "home": "Domov",
+      "jobs": "Pracovné ponuky"
+    },
+    "salary": "Odmena",
+    "startDate": "Začiatok",
+    "contractType": "Forma úväzku",
+    "team": "Zabehnutá partia, šikovných elektrikárov - dvaja alebo štyria",
+    "description": "Popis práce",
+    "requirements": "Požiadavky",
+    "apply": "Mám záujem",
+    "backToJobs": "Späť na ponuky",
+    "relatedJobs": "Podobné ponuky",
+    "benefits": {
+      "title": "Výhody spolupráce s nami",
+      "advantages": "Benefity",
+      "details": "Benefity",
+      "benefit1": {
+        "title": "Nástup už do 5 dní",
+        "description": "Naša spoločnosť ponúka komplexnú podporu a poradenstvo pred nástupom, aj počas trvania celej spolupráce."
+      },
+      "benefit2": {
+        "title": "Dlhodobá spolupráca",
+        "description": "Pri obojstrannej spokojnosti pokračujete v nadväzujúcich projektoch, čo vám zaručuje nepretržitý príjem."
+      },
+      "benefit3": {
+        "title": "Férové ohodnotenie",
+        "description": "Vaša odmena je pravidelne vyplácaná podľa dohody a vieme poskytnúť možnosť zálohovej platby."
+      },
+      "benefit4": {
+        "title": "Hradené ubytovanie",
+        "description": "Ubytovanie je starostlivo vyberané tak, aby vyhovovalo vašim potrebám a umožnilo dlhodobý pobyt."
+      }
+    },
+    "faq": {
+      "title": "Časté otázky",
+      "q1": {
+        "question": "Prečo si mám vybrať práve vás?",
+        "answer": "Máme bohaté skúsenosti a za sebou stovky úspešne dokončených projektov v Nemecku a Rakúsku. Naša dlhoročná prax z nás robí spoľahlivého a overeného partnera. Poskytujeme komplexnú podporu počas celej doby projektu. Od výberu ideálnych ponúk, cez zabezpečovanie ubytovania až po priebežnú podporu počas celej zákazky."
+      },
+      "q2": {
+        "question": "Aké dokumenty potrebujem?",
+        "answer": "Na spoluprácu budeme od vás potrebovať životopis, živnostenský list, kartičku poistenca platnú v rámci EÚ a formulár A1 od Sociálnej poisťovne. Elektrikári a zvárači tiež budú potrebovať konkrétne osvedčenia (vyhlášku, certifikát), ktoré dokazujú spôsobilosť vykonávať danú prácu. Požiadavky sa môžu líšiť podľa konkrétnej pozície."
+      },
+      "q3": {
+        "question": "Mám zabezpečené ubytovanie?",
+        "answer": "Ako spolupracovník našej spoločnosti máte zabezpečené a hradené ubytovanie počas pracovného pobytu v Nemecku alebo Rakúsku. Ubytovanie je starostlivo vyberané tak, aby vyhovovalo vašim potrebám a umožnilo pohodlný pobyt. Táto výhoda je súčasťou našej podpory, ktorou vám chceme spríjemniť pracovné pôsobenie v zahraničí."
+      },
+      "q4": {
+        "question": "Na koho sa mám obrátiť v prípade problému?",
+        "answer": "Radi vám poskytneme kompletnú podporu, či už ide o administratívu, vybavenie dokumentov alebo komunikáciu so zahraničnými partnermi. Ak sa vyskytne problém, riešime ho urgentne a ku spokojnosti všetkých strán. Našou prioritou je, aby ste sa mohli plne sústrediť na svoju prácu bez zbytočných komplikácií. Náš tím profesionálov sa postará o všetko potrebné."
+      }
+    },
+    "sidebar": {
+      "contact": {
+        "title": "Získajte prácu ešte dnes",
+        "subtitle": "Potrebné informácie o spolupráci, turnusoch a zárobku na jednom mieste."
+      },
+      "stats": "Za 15 rokov sme našli vhodnú prácu pre viac ako 1000 ľudí",
+      "person": {
+        "title": "Kontaktná osoba"
+      }
+    }
+  }
+}
+

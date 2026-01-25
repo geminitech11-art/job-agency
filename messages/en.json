@@ -1,0 +1,319 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "jobs": "Job Listings",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": {
+        "line1": "Work on",
+        "line2": "projects",
+        "line3": "abroad"
+      },
+      "tagline": "Your success starts with us.",
+      "cta": {
+        "primary": "Job Offers",
+        "secondary": "About Us"
+      },
+      "stats": "In 15 years, we have found suitable work for more than 1000 people",
+      "current": {
+        "title": "CURRENTLY",
+        "count": "19",
+        "label": "open positions"
+      }
+    },
+    "title": "Your Career Partner",
+    "subtitle": "Connecting talented professionals with exceptional opportunities",
+    "cta": "Browse Jobs",
+    "features": {
+      "title": "Why Choose Us",
+      "feature1": {
+        "title": "Expert Guidance",
+        "description": "Our experienced team provides personalized career advice"
+      },
+      "feature2": {
+        "title": "Wide Network",
+        "description": "Access to top employers across multiple industries"
+      },
+      "feature3": {
+        "title": "Fast Placement",
+        "description": "Quick matching process to get you started faster"
+      }
+    },
+    "benefits": {
+      "benefit1": {
+        "title": "Start within 5 days",
+        "description": "Our company offers comprehensive support and advice before starting, and throughout the entire cooperation."
+      },
+      "benefit2": {
+        "title": "Long-term cooperation",
+        "description": "With mutual satisfaction, you continue in subsequent projects, which guarantees you continuous income."
+      },
+      "benefit3": {
+        "title": "Fair remuneration",
+        "description": "Your remuneration is regularly paid according to agreement and we can provide the option of advance payment."
+      },
+      "benefit4": {
+        "title": "Paid accommodation",
+        "description": "Accommodation is carefully selected to meet your needs and allow for a long-term stay."
+      }
+    }
+  },
+  "about": {
+    "title": "About Our Agency",
+    "description": "We are a leading job placement agency dedicated to connecting talented professionals with their dream careers. With years of experience in the recruitment industry, we understand the challenges job seekers face and work tirelessly to match them with the right opportunities.",
+    "mission": "Our Mission",
+    "missionText": "To bridge the gap between talented professionals and exceptional employers, creating mutually beneficial partnerships that drive success.",
+    "values": "Our Values",
+    "value1": "Integrity and transparency in all our dealings",
+    "value2": "Commitment to excellence and continuous improvement",
+    "value3": "Respect for diversity and inclusion"
+  },
+  "jobs": {
+    "title": "Available Positions",
+    "search": "Search jobs...",
+    "filter": "Filter by category",
+    "noJobs": "No jobs available at the moment. Please check back later.",
+    "apply": "Apply Now",
+    "details": "View Details"
+  },
+  "contact": {
+    "title": "Contact us today",
+    "subtitle": "All necessary information about cooperation, shifts, and earnings in one place.",
+    "form": {
+      "name": "Name and Surname*",
+      "phone": "Phone number*",
+      "email": "E-mail*",
+      "profession": "Select profession*",
+      "startDate": "Start date*",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent successfully. We will contact you soon.",
+      "error": "An error occurred. Please try again or contact us directly."
+    },
+    "stats": {
+      "title": "In 15 years, we have found suitable work for more than 1000 people"
+    },
+    "current": {
+      "title": "CURRENTLY",
+      "projects": "open projects"
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "hours": "Office Hours"
+    },
+    "hours": {
+      "weekdays": "Monday - Friday: 9:00 - 18:00",
+      "saturday": "Saturday: 10:00 - 16:00"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions and Important Information",
+    "subtitle": "Everything you need to know about freelance work in Germany and Austria.",
+    "tagline": "Your success starts with us.",
+    "categories": {
+      "all": "All",
+      "general": "General Questions",
+      "before": "Before Starting",
+      "payment": "Payment & Accommodation",
+      "work": "During Work"
+    },
+    "items": {
+      "general": {
+        "q1": {
+          "question": "Where can I find current job offers?",
+          "answer": "All our current projects and freelance contracts can be found in the job listings section. We update offers every week. If you haven't found a suitable contract yet, one may appear soon. Alternatively, you can contact us with your preferences, and together we'll find a project suitable for you."
+        },
+        "q2": {
+          "question": "Do I need a business license to apply for a contract?",
+          "answer": "Yes, a business license certificate is required because you work as an independent subcontractor on projects, not as an employee. Also, payment for work performed will be paid based on an issued invoice. The business license must be active for at least two months."
+        },
+        "q3": {
+          "question": "Can I choose a contract based on location and duration?",
+          "answer": "Yes, depending on demand, we can also arrange a contract in your preferred location. Let us know where you would like to work and we'll find out current options. We have job offers year-round. In case of interest and mutual satisfaction, long-term cooperation is also possible so you have a stable income. But we also have short-term contracts in our offer."
+        },
+        "q4": {
+          "question": "What are the most common types of contracts you offer, and how long does it take to start working?",
+          "answer": "Most often you'll find work related to electrical installations, assembly of facade structures and panels, or plumbing in Germany and Austria. After submitting all necessary documents and approval from the foreign company, work can start immediately, so the whole process is really fast."
+        }
+      },
+      "before": {
+        "q1": {
+          "question": "Why should I choose you?",
+          "answer": "We have extensive experience and hundreds of successfully completed projects in Germany and Austria behind us. Our years of practice make us a reliable and proven partner. We provide comprehensive support throughout the entire project period. From selecting ideal offers, through assistance in securing accommodation, to ongoing support throughout the entire contract."
+        },
+        "q2": {
+          "question": "What documents do I need?",
+          "answer": "For cooperation, we will need from you: a resume, business license, valid EU health insurance card, PDA1 form from Social Insurance. Electricians and welders will also need specific certificates (regulation, certificate) that prove competence to perform the work."
+        },
+        "q3": {
+          "question": "Why is the PDA1 form needed?",
+          "answer": "The PDA1 form from Social Insurance confirms that even during work abroad you remain insured in Slovakia and pay contributions in Slovakia. This form will be issued by the relevant Social Insurance branch based on a work contract or order. Social Insurance usually issues the form within 45 days. We'll be happy to help you with its processing."
+        },
+        "q4": {
+          "question": "Your offer interests me. What's next?",
+          "answer": "Great. Via the form or by email, send us your name, contact, profession, possibly a specific offer, and don't forget to attach the necessary documents (resume, business license, A1 form, certificates). We will then contact you with the next steps."
+        },
+        "q5": {
+          "question": "Do you require a job interview before starting?",
+          "answer": "Yes, before starting work, it's necessary to have a personal meeting so that before starting cooperation, both parties have enough information. By agreement, a phone interview is also possible, during which we'll go over all cooperation details. This interview is not long and serves to inform all parties well."
+        }
+      },
+      "payment": {
+        "q1": {
+          "question": "When and how will I get paid?",
+          "answer": "You invoice after two worked weeks based on hours worked, invoice payment terms are 14 business days. For this reason, a business license is essential for performing work. We ensure that you always receive your payment on time and in full."
+        },
+        "q2": {
+          "question": "What about accommodation?",
+          "answer": "We'll help you secure accommodation near the workplace. Most projects have accommodation secured, which is included in the contract terms. In case accommodation is not part of the contract, we'll help you find suitable accommodation in the given location."
+        }
+      },
+      "work": {
+        "q1": {
+          "question": "Can I work alone or do I need to be in a team?",
+          "answer": "It depends on the type of contract. Some contracts require working in a team, others we can place as an individual into a team. Work experience is a condition; if you don't have the necessary experience, it's only possible to start in a team together with a more experienced colleague. Training is needed in a specific field for the given contract (electricians, locksmiths, facade workers...)."
+        },
+        "q2": {
+          "question": "Do I need to know German, and can I work without experience working abroad?",
+          "answer": "At least one of a pair or one from the team must speak German, as it's necessary to communicate at work. We offer opportunities even for beginners in working abroad, but they must be part of an already established team."
+        },
+        "q3": {
+          "question": "What if contract conditions change during work?",
+          "answer": "Agreed conditions don't change during the contract work period. However, the work location (construction site) may change, but you'll be informed in advance. In case you can't complete the contract or move to another, cooperation will be terminated by agreement. Payment will be made according to contract terms."
+        },
+        "q4": {
+          "question": "Who should I contact in case of any problem?",
+          "answer": "We'll be happy to provide you with complete support, whether with administration, document processing, or communication with foreign partners. If any problem arises, we solve it urgently and to everyone's satisfaction so you can focus on your work and nothing disturbs you."
+        }
+      }
+    },
+    "cta": {
+      "title": "Didn't find the answer to your question?",
+      "description": "If you didn't find the answer to your question, feel free to contact us, and we'll be happy to answer your question.",
+      "button": "Contact Us"
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "About Company",
+      "home": "Home",
+      "about": "About Us",
+      "contact": "Contact"
+    },
+    "info": {
+      "title": "Important Information",
+      "jobs": "Job Offers",
+      "faq": "FAQ",
+      "tax": "Tax Exemption",
+      "accommodation": "Accommodation",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy"
+    },
+    "contact": {
+      "title": "Contacts"
+    },
+    "copyright": "All rights reserved"
+  },
+  "jobs": {
+    "breadcrumb": {
+      "home": "Home",
+      "jobs": "Job Offers"
+    },
+    "hero": {
+      "title": "Best job offers in Germany and Austria",
+      "description": "We regularly search and update interesting contracts for you in Germany and Austria.",
+      "cta": "Contact us immediately"
+    },
+    "filter": {
+      "button": "Filter",
+      "country": "Country",
+      "location": "Location",
+      "profession": "Profession"
+    },
+    "title": "Job Offers",
+    "subtitle": "All offers",
+    "search": "Search jobs...",
+    "filter": "Filter by category",
+    "noJobs": "No jobs available at the moment. Please check back later.",
+    "apply": "Apply Now",
+    "details": "View Details",
+    "salary": "Salary",
+    "startDate": "Start Date",
+    "moreInfo": "More Information",
+    "open": "OPEN",
+    "closed": "CLOSED"
+  },
+  "jobDetail": {
+    "breadcrumb": {
+      "home": "Home",
+      "jobs": "Job Offers"
+    },
+    "salary": "Salary",
+    "startDate": "Start Date",
+    "contractType": "Contract Type",
+    "team": "Established team of skilled electricians - two or four",
+    "description": "Job Description",
+    "requirements": "Requirements",
+    "apply": "I'm interested",
+    "backToJobs": "Back to Jobs",
+    "relatedJobs": "Related Jobs",
+    "benefits": {
+      "title": "Benefits of working with us",
+      "advantages": "Benefits",
+      "details": "Benefits",
+      "benefit1": {
+        "title": "Start within 5 days",
+        "description": "Our company offers comprehensive support and advice before starting, and throughout the entire cooperation."
+      },
+      "benefit2": {
+        "title": "Long-term cooperation",
+        "description": "With mutual satisfaction, you continue in subsequent projects, which guarantees you continuous income."
+      },
+      "benefit3": {
+        "title": "Fair remuneration",
+        "description": "Your remuneration is regularly paid according to agreement and we can provide the option of advance payment."
+      },
+      "benefit4": {
+        "title": "Paid accommodation",
+        "description": "Accommodation is carefully selected to meet your needs and allow for a long-term stay."
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "Why should I choose you?",
+        "answer": "We have extensive experience and hundreds of successfully completed projects in Germany and Austria. Our years of practice make us a reliable and proven partner. We provide comprehensive support throughout the entire project period. From selecting ideal offers, through securing accommodation to ongoing support throughout the entire contract."
+      },
+      "q2": {
+        "question": "What documents do I need?",
+        "answer": "For cooperation, we will need from you: a resume, business license, valid EU health insurance card, and A1 form from Social Insurance. Electricians and welders will also need specific certificates (regulation, certificate) that prove competence to perform the work. Requirements may vary depending on the specific position."
+      },
+      "q3": {
+        "question": "Do I have accommodation secured?",
+        "answer": "As a collaborator of our company, you have secured and paid accommodation during your work stay in Germany or Austria. Accommodation is carefully selected to meet your needs and allow a comfortable stay. This benefit is part of our support, which we want to make your work abroad more pleasant."
+      },
+      "q4": {
+        "question": "Who should I contact in case of a problem?",
+        "answer": "We will be happy to provide you with complete support, whether it's administration, document processing, or communication with foreign partners. If a problem arises, we solve it urgently and to everyone's satisfaction. Our priority is for you to be able to fully focus on your work without unnecessary complications. Our team of professionals will take care of everything needed."
+      }
+    },
+    "sidebar": {
+      "contact": {
+        "title": "Get a job today",
+        "subtitle": "All necessary information about cooperation, shifts, and earnings in one place."
+      },
+      "stats": "In 15 years, we have found suitable work for more than 1000 people",
+      "person": {
+        "title": "Contact Person"
+      }
+    }
+  }
+}
+

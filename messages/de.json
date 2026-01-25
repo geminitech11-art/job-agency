@@ -1,0 +1,319 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "jobs": "Stellenangebote",
+    "faq": "Häufige Fragen",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "hero": {
+      "title": {
+        "line1": "Arbeiten Sie an",
+        "line2": "Projekten im",
+        "line3": "Ausland"
+      },
+      "tagline": "Ihr Erfolg beginnt mit uns.",
+      "cta": {
+        "primary": "Stellenangebote",
+        "secondary": "Über uns"
+      },
+      "stats": "In 15 Jahren haben wir für mehr als 1000 Menschen passende Arbeit gefunden",
+      "current": {
+        "title": "AKTUELL",
+        "count": "19",
+        "label": "offene Stellen"
+      }
+    },
+    "title": "Ihr Karrierepartner",
+    "subtitle": "Wir verbinden talentierte Fachkräfte mit außergewöhnlichen Möglichkeiten",
+    "cta": "Stellen durchsuchen",
+    "features": {
+      "title": "Warum uns wählen",
+      "feature1": {
+        "title": "Expertenberatung",
+        "description": "Unser erfahrenes Team bietet personalisierte Karriereberatung"
+      },
+      "feature2": {
+        "title": "Breites Netzwerk",
+        "description": "Zugang zu Top-Arbeitgebern in verschiedenen Branchen"
+      },
+      "feature3": {
+        "title": "Schnelle Vermittlung",
+        "description": "Schneller Matching-Prozess für einen schnelleren Start"
+      }
+    },
+    "benefits": {
+      "benefit1": {
+        "title": "Start innerhalb von 5 Tagen",
+        "description": "Unser Unternehmen bietet umfassende Unterstützung und Beratung vor dem Start und während der gesamten Zusammenarbeit."
+      },
+      "benefit2": {
+        "title": "Langfristige Zusammenarbeit",
+        "description": "Bei beidseitiger Zufriedenheit setzen Sie in nachfolgenden Projekten fort, was Ihnen kontinuierliches Einkommen garantiert."
+      },
+      "benefit3": {
+        "title": "Faire Vergütung",
+        "description": "Ihre Vergütung wird regelmäßig gemäß Vereinbarung ausgezahlt und wir können die Möglichkeit einer Vorauszahlung anbieten."
+      },
+      "benefit4": {
+        "title": "Bezahlte Unterkunft",
+        "description": "Die Unterkunft wird sorgfältig ausgewählt, um Ihren Bedürfnissen zu entsprechen und einen langfristigen Aufenthalt zu ermöglichen."
+      }
+    }
+  },
+  "about": {
+    "title": "Über unsere Agentur",
+    "description": "Wir sind eine führende Personalvermittlungsagentur, die sich darauf konzentriert, talentierte Fachkräfte mit ihren Traumkarrieren zu verbinden. Mit jahrelanger Erfahrung in der Rekrutierungsbranche verstehen wir die Herausforderungen, mit denen Arbeitssuchende konfrontiert sind, und arbeiten unermüdlich daran, sie mit den richtigen Möglichkeiten zu verbinden.",
+    "mission": "Unsere Mission",
+    "missionText": "Die Lücke zwischen talentierten Fachkräften und außergewöhnlichen Arbeitgebern zu überbrücken und gegenseitig vorteilhafte Partnerschaften zu schaffen, die den Erfolg fördern.",
+    "values": "Unsere Werte",
+    "value1": "Integrität und Transparenz in all unseren Geschäften",
+    "value2": "Engagement für Exzellenz und kontinuierliche Verbesserung",
+    "value3": "Respekt für Vielfalt und Inklusion"
+  },
+  "jobs": {
+    "title": "Verfügbare Stellen",
+    "search": "Stellen suchen...",
+    "filter": "Nach Kategorie filtern",
+    "noJobs": "Derzeit sind keine Stellen verfügbar. Bitte schauen Sie später wieder vorbei.",
+    "apply": "Jetzt bewerben",
+    "details": "Details anzeigen"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns noch heute",
+    "subtitle": "Alle notwendigen Informationen über Zusammenarbeit, Schichten und Verdienst an einem Ort.",
+    "form": {
+      "name": "Vor- und Nachname*",
+      "phone": "Telefonnummer*",
+      "email": "E-Mail*",
+      "profession": "Beruf auswählen*",
+      "startDate": "Startdatum*",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir werden Sie bald kontaktieren.",
+      "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
+    },
+    "stats": {
+      "title": "In 15 Jahren haben wir für mehr als 1000 Menschen passende Arbeit gefunden"
+    },
+    "current": {
+      "title": "AKTUELL",
+      "projects": "offene Projekte"
+    },
+    "info": {
+      "title": "Kontaktinformationen",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "address": "Adresse",
+      "hours": "Bürozeiten"
+    },
+    "hours": {
+      "weekdays": "Montag - Freitag: 9:00 - 18:00",
+      "saturday": "Samstag: 10:00 - 16:00"
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen und wichtige Informationen",
+    "subtitle": "Alles, was Sie über freiberufliche Arbeit in Deutschland und Österreich wissen müssen.",
+    "tagline": "Ihr Erfolg beginnt mit uns.",
+    "categories": {
+      "all": "Alle",
+      "general": "Allgemeine Fragen",
+      "before": "Vor dem Start",
+      "payment": "Vergütung & Unterkunft",
+      "work": "Während der Arbeit"
+    },
+    "items": {
+      "general": {
+        "q1": {
+          "question": "Wo finde ich aktuelle Stellenangebote?",
+          "answer": "Alle unsere aktuellen Projekte und freiberuflichen Verträge finden Sie im Bereich Stellenangebote. Wir aktualisieren die Angebote jede Woche. Wenn Sie noch keinen passenden Vertrag gefunden haben, kann bald einer erscheinen. Alternativ können Sie uns mit Ihren Präferenzen kontaktieren, und gemeinsam finden wir ein für Sie geeignetes Projekt."
+        },
+        "q2": {
+          "question": "Benötige ich eine Gewerbeerlaubnis, um mich auf einen Vertrag zu bewerben?",
+          "answer": "Ja, ein Gewerbeschein ist erforderlich, da Sie als selbstständiger Unterauftragnehmer an Projekten arbeiten, nicht als Angestellter. Außerdem wird die Vergütung für geleistete Arbeit auf der Grundlage einer ausgestellten Rechnung gezahlt. Die Gewerbeerlaubnis muss mindestens zwei Monate aktiv sein."
+        },
+        "q3": {
+          "question": "Kann ich einen Vertrag nach Standort und Dauer wählen?",
+          "answer": "Ja, je nach Nachfrage können wir auch einen Vertrag an Ihrem bevorzugten Standort arrangieren. Lassen Sie uns wissen, wo Sie arbeiten möchten, und wir finden aktuelle Optionen. Wir haben das ganze Jahr über Stellenangebote. Bei Interesse und gegenseitiger Zufriedenheit ist auch eine langfristige Zusammenarbeit möglich, damit Sie ein stabiles Einkommen haben. Aber wir haben auch kurzfristige Verträge im Angebot."
+        },
+        "q4": {
+          "question": "Welche Arten von Verträgen bieten Sie am häufigsten an, und wie lange dauert es, bis ich mit der Arbeit beginnen kann?",
+          "answer": "Meistens finden Sie Arbeiten im Zusammenhang mit Elektroinstallationen, Montage von Fassadenkonstruktionen und Paneelen oder Sanitärinstallationen in Deutschland und Österreich. Nach Einreichung aller erforderlichen Dokumente und Genehmigung des ausländischen Unternehmens kann die Arbeit sofort beginnen, der gesamte Prozess ist wirklich schnell."
+        }
+      },
+      "before": {
+        "q1": {
+          "question": "Warum sollte ich Sie wählen?",
+          "answer": "Wir haben umfangreiche Erfahrung und Hunderte erfolgreich abgeschlossener Projekte in Deutschland und Österreich. Unsere jahrelange Praxis macht uns zu einem zuverlässigen und bewährten Partner. Wir bieten umfassende Unterstützung während der gesamten Projektlaufzeit. Von der Auswahl idealer Angebote über Unterstützung bei der Unterkunftssicherung bis hin zur kontinuierlichen Unterstützung während des gesamten Vertrags."
+        },
+        "q2": {
+          "question": "Welche Dokumente benötige ich?",
+          "answer": "Für die Zusammenarbeit benötigen wir von Ihnen: einen Lebenslauf, Gewerbeschein, gültige EU-Krankenversicherungskarte, PDA1-Formular der Sozialversicherung. Elektriker und Schweißer benötigen auch spezifische Zertifikate (Verordnung, Zertifikat), die die Kompetenz zur Ausführung der Arbeit nachweisen."
+        },
+        "q3": {
+          "question": "Warum wird das PDA1-Formular benötigt?",
+          "answer": "Das PDA1-Formular der Sozialversicherung bestätigt, dass Sie auch während der Arbeit im Ausland in der Slowakei versichert bleiben und Beiträge in der Slowakei zahlen. Dieses Formular wird von der zuständigen Sozialversicherungsstelle auf der Grundlage eines Werkvertrags oder Auftrags ausgestellt. Die Sozialversicherung stellt das Formular normalerweise innerhalb von 45 Tagen aus. Wir helfen Ihnen gerne bei der Bearbeitung."
+        },
+        "q4": {
+          "question": "Ihr Angebot interessiert mich. Wie geht es weiter?",
+          "answer": "Großartig. Senden Sie uns über das Formular oder per E-Mail Ihren Namen, Kontakt, Beruf, möglicherweise ein spezifisches Angebot, und vergessen Sie nicht, die erforderlichen Dokumente beizufügen (Lebenslauf, Gewerbeschein, A1-Formular, Zertifikate). Wir werden Sie dann mit den nächsten Schritten kontaktieren."
+        },
+        "q5": {
+          "question": "Erfordern Sie ein Vorstellungsgespräch vor dem Start?",
+          "answer": "Ja, vor Arbeitsbeginn ist ein persönliches Treffen erforderlich, damit beide Parteien vor Beginn der Zusammenarbeit genügend Informationen haben. Nach Vereinbarung ist auch ein Telefongespräch möglich, bei dem wir alle Details der Zusammenarbeit durchgehen. Dieses Gespräch ist nicht lang und dient der guten Information aller Parteien."
+        }
+      },
+      "payment": {
+        "q1": {
+          "question": "Wann und wie werde ich bezahlt?",
+          "answer": "Sie rechnen nach zwei gearbeiteten Wochen auf der Grundlage der geleisteten Stunden ab, die Zahlungsfrist für Rechnungen beträgt 14 Werktage. Aus diesem Grund ist eine Gewerbeerlaubnis für die Ausführung der Arbeit unerlässlich. Wir stellen sicher, dass Sie Ihre Vergütung immer pünktlich und in voller Höhe erhalten."
+        },
+        "q2": {
+          "question": "Wie sieht es mit der Unterkunft aus?",
+          "answer": "Wir helfen Ihnen, eine Unterkunft in der Nähe des Arbeitsplatzes zu sichern. Die meisten Projekte haben eine gesicherte Unterkunft, die in den Vertragsbedingungen enthalten ist. Falls die Unterkunft nicht Teil des Vertrags ist, helfen wir Ihnen, eine geeignete Unterkunft am jeweiligen Standort zu finden."
+        }
+      },
+      "work": {
+        "q1": {
+          "question": "Kann ich alleine arbeiten oder muss ich in einem Team sein?",
+          "answer": "Es hängt von der Art des Vertrags ab. Einige Verträge erfordern die Arbeit im Team, andere können wir als Einzelperson in ein Team platzieren. Berufserfahrung ist eine Voraussetzung; wenn Sie nicht die erforderliche Erfahrung haben, ist es nur möglich, in einem Team zusammen mit einem erfahreneren Kollegen zu beginnen. Eine Ausbildung ist in einem spezifischen Bereich für den jeweiligen Vertrag erforderlich (Elektriker, Schlosser, Fassadenarbeiter...)."
+        },
+        "q2": {
+          "question": "Muss ich Deutsch können, und kann ich ohne Erfahrung im Ausland arbeiten?",
+          "answer": "Mindestens einer eines Paares oder einer aus dem Team muss Deutsch sprechen, da es notwendig ist, bei der Arbeit zu kommunizieren. Wir bieten auch Anfängern im Ausland Möglichkeiten, aber sie müssen Teil eines bereits etablierten Teams sein."
+        },
+        "q3": {
+          "question": "Was ist, wenn sich die Vertragsbedingungen während der Arbeit ändern?",
+          "answer": "Vereinbarte Bedingungen ändern sich während der Vertragsarbeitszeit nicht. Der Arbeitsort (Baustelle) kann sich jedoch ändern, aber Sie werden rechtzeitig informiert. Falls Sie den Vertrag nicht abschließen oder zu einem anderen wechseln können, wird die Zusammenarbeit einvernehmlich beendet. Die Zahlung erfolgt gemäß den Vertragsbedingungen."
+        },
+        "q4": {
+          "question": "An wen soll ich mich bei Problemen wenden?",
+          "answer": "Wir helfen Ihnen gerne mit vollständiger Unterstützung, sei es bei der Verwaltung, der Bearbeitung von Dokumenten oder der Kommunikation mit ausländischen Partnern. Wenn ein Problem auftritt, lösen wir es dringend und zur Zufriedenheit aller, damit Sie sich auf Ihre Arbeit konzentrieren können und nichts Sie stört."
+        }
+      }
+    },
+    "cta": {
+      "title": "Haben Sie keine Antwort auf Ihre Frage gefunden?",
+      "description": "Wenn Sie keine Antwort auf Ihre Frage gefunden haben, kontaktieren Sie uns gerne, und wir beantworten Ihre Frage gerne.",
+      "button": "Kontaktieren Sie uns"
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "Über das Unternehmen",
+      "home": "Startseite",
+      "about": "Über uns",
+      "contact": "Kontakt"
+    },
+    "info": {
+      "title": "Wichtige Informationen",
+      "jobs": "Stellenangebote",
+      "faq": "Häufige Fragen",
+      "tax": "Steuerbefreiung",
+      "accommodation": "Unterkunft",
+      "privacy": "Datenschutz",
+      "cookies": "Cookie-Richtlinie"
+    },
+    "contact": {
+      "title": "Kontakte"
+    },
+    "copyright": "Alle Rechte vorbehalten"
+  },
+  "jobs": {
+    "breadcrumb": {
+      "home": "Startseite",
+      "jobs": "Stellenangebote"
+    },
+    "hero": {
+      "title": "Beste Stellenangebote in Deutschland und Österreich",
+      "description": "Wir suchen regelmäßig und aktualisieren interessante Aufträge für Sie in Deutschland und Österreich.",
+      "cta": "Kontaktieren Sie uns sofort"
+    },
+    "filter": {
+      "button": "Filter",
+      "country": "Land",
+      "location": "Standort",
+      "profession": "Beruf"
+    },
+    "title": "Stellenangebote",
+    "subtitle": "Alle Angebote",
+    "search": "Stellen suchen...",
+    "filter": "Nach Kategorie filtern",
+    "noJobs": "Derzeit sind keine Stellen verfügbar. Bitte schauen Sie später wieder vorbei.",
+    "apply": "Jetzt bewerben",
+    "details": "Details anzeigen",
+    "salary": "Gehalt",
+    "startDate": "Startdatum",
+    "moreInfo": "Weitere Informationen",
+    "open": "OFFEN",
+    "closed": "GESCHLOSSEN"
+  },
+  "jobDetail": {
+    "breadcrumb": {
+      "home": "Startseite",
+      "jobs": "Stellenangebote"
+    },
+    "salary": "Gehalt",
+    "startDate": "Startdatum",
+    "contractType": "Vertragsart",
+    "team": "Etabliertes Team geschickter Elektriker - zwei oder vier",
+    "description": "Stellenbeschreibung",
+    "requirements": "Anforderungen",
+    "apply": "Ich bin interessiert",
+    "backToJobs": "Zurück zu Stellen",
+    "relatedJobs": "Ähnliche Stellen",
+    "benefits": {
+      "title": "Vorteile der Zusammenarbeit mit uns",
+      "advantages": "Vorteile",
+      "details": "Vorteile",
+      "benefit1": {
+        "title": "Start innerhalb von 5 Tagen",
+        "description": "Unser Unternehmen bietet umfassende Unterstützung und Beratung vor dem Start und während der gesamten Zusammenarbeit."
+      },
+      "benefit2": {
+        "title": "Langfristige Zusammenarbeit",
+        "description": "Bei beidseitiger Zufriedenheit setzen Sie in nachfolgenden Projekten fort, was Ihnen kontinuierliches Einkommen garantiert."
+      },
+      "benefit3": {
+        "title": "Faire Vergütung",
+        "description": "Ihre Vergütung wird regelmäßig gemäß Vereinbarung ausgezahlt und wir können die Möglichkeit einer Vorauszahlung anbieten."
+      },
+      "benefit4": {
+        "title": "Bezahlte Unterkunft",
+        "description": "Die Unterkunft wird sorgfältig ausgewählt, um Ihren Bedürfnissen zu entsprechen und einen langfristigen Aufenthalt zu ermöglichen."
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": {
+        "question": "Warum sollte ich Sie wählen?",
+        "answer": "Wir haben umfangreiche Erfahrung und Hunderte erfolgreich abgeschlossener Projekte in Deutschland und Österreich. Unsere jahrelange Praxis macht uns zu einem zuverlässigen und bewährten Partner. Wir bieten umfassende Unterstützung während der gesamten Projektlaufzeit. Von der Auswahl idealer Angebote über die Sicherung der Unterkunft bis hin zur kontinuierlichen Unterstützung während des gesamten Vertrags."
+      },
+      "q2": {
+        "question": "Welche Dokumente benötige ich?",
+        "answer": "Für die Zusammenarbeit benötigen wir von Ihnen: einen Lebenslauf, Gewerbeschein, gültige EU-Krankenversicherungskarte und A1-Formular der Sozialversicherung. Elektriker und Schweißer benötigen auch spezifische Zertifikate (Verordnung, Zertifikat), die die Kompetenz zur Ausführung der Arbeit nachweisen. Die Anforderungen können je nach spezifischer Position variieren."
+      },
+      "q3": {
+        "question": "Habe ich eine gesicherte Unterkunft?",
+        "answer": "Als Mitarbeiter unseres Unternehmens haben Sie eine gesicherte und bezahlte Unterkunft während Ihres Arbeitsaufenthalts in Deutschland oder Österreich. Die Unterkunft wird sorgfältig ausgewählt, um Ihren Bedürfnissen zu entsprechen und einen komfortablen Aufenthalt zu ermöglichen. Dieser Vorteil ist Teil unserer Unterstützung, mit der wir Ihren Arbeitseinsatz im Ausland angenehmer gestalten möchten."
+      },
+      "q4": {
+        "question": "An wen soll ich mich bei einem Problem wenden?",
+        "answer": "Wir helfen Ihnen gerne mit vollständiger Unterstützung, sei es bei der Verwaltung, der Bearbeitung von Dokumenten oder der Kommunikation mit ausländischen Partnern. Wenn ein Problem auftritt, lösen wir es dringend und zur Zufriedenheit aller. Unsere Priorität ist, dass Sie sich vollständig auf Ihre Arbeit konzentrieren können, ohne unnötige Komplikationen. Unser Team von Profis kümmert sich um alles Notwendige."
+      }
+    },
+    "sidebar": {
+      "contact": {
+        "title": "Noch heute einen Job bekommen",
+        "subtitle": "Alle notwendigen Informationen über Zusammenarbeit, Schichten und Verdienst an einem Ort."
+      },
+      "stats": "In 15 Jahren haben wir für mehr als 1000 Menschen passende Arbeit gefunden",
+      "person": {
+        "title": "Kontaktperson"
+      }
+    }
+  }
+}
+

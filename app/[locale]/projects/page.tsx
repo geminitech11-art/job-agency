@@ -1,6 +1,11 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-export default async function ProjectsPage() {
+export default async function ProjectsPage({
+  params: { locale }
+}: {
+  params: { locale: string };
+}) {
+  setRequestLocale(locale);
   const t = await getTranslations('nav');
   
   return (

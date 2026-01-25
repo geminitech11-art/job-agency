@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getOpenJobsCount, jobs } from '@/lib/jobs';
@@ -11,6 +11,7 @@ export default async function HomePage({
 }: {
   params: { locale: string };
 }) {
+  setRequestLocale(locale);
   const t = await getTranslations('home');
   const openJobsCount = getOpenJobsCount();
 

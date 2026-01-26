@@ -5,13 +5,22 @@ export const locales = ['en', 'sk', 'de'] as const;
 export const defaultLocale = 'en' as const;
 export type Locale = (typeof locales)[number];
 
-// For static generation, we need to avoid accessing headers()
-// setRequestLocale() in pages/layouts will set the locale context
+// For Next.js 14.2.35 + next-intl 3.5.0 static generation
+// We use requestLocale but handle the case where it might access headers()
 export default getRequestConfig(async ({ requestLocale }) => {
-  const locale = await requestLocale;
+  let locale: string | undefined;
   
-  // During static generation with setRequestLocale, locale should be available
-  // If not, fallback to default (shouldn't happen if setRequestLocale is called)
+  // Try to get locale from requestLocale (set by setRequestLocale)
+  // If it fails during static generation, it will fallback gracefully
+  try {
+    locale = await requestLocale;
+  } catch {
+    // During static generation, if requestLocale isn't set yet,
+    // we'll use default. setRequestLocale in layout will override this.
+    locale = defaultLocale;
+  }
+  
+  // Ensure we have a valid locale
   const finalLocale = locale || defaultLocale;
   
   if (!locales.includes(finalLocale as Locale)) notFound();

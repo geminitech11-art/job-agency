@@ -25,7 +25,8 @@
         "title": "CURRENTLY",
         "count": "19",
         "label": "open positions"
-      }
+      },
+      "imageAlt": "Electrician working on electrical panel"
     },
     "title": "Your Career Partner",
     "subtitle": "Connecting talented professionals with exceptional opportunities",
@@ -101,6 +102,7 @@
     },
     "current": {
       "title": "CURRENTLY",
+      "available": "available",
       "projects": "open projects"
     },
     "info": {
@@ -245,6 +247,15 @@
     "countries": {
       "germany": "Germany",
       "austria": "Austria"
+    },
+    "professions": {
+      "electrician": "Electrician",
+      "locksmith": "Locksmith",
+      "plumber": "Plumber",
+      "construction": "Construction Worker",
+      "painter": "Painter",
+      "welder": "Welder",
+      "other": "Other"
     },
     "title": "Job Offers",
     "subtitle": "All offers",

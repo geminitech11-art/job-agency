@@ -1,14 +1,44 @@
+export type Locale = 'en' | 'sk' | 'de';
+
+function pickLocale<T extends Record<string, unknown>>(
+  obj: T,
+  locale: Locale,
+  key: string
+): string {
+  const k = key + (locale === 'sk' ? 'Sk' : locale === 'de' ? 'De' : 'En');
+  const v = obj[k as keyof T];
+  return typeof v === 'string' ? v : (obj[(key + 'Sk') as keyof T] as string) || '';
+}
+
+export function getJobTitle(job: Record<string, unknown>, locale: Locale): string {
+  return pickLocale(job as Record<string, unknown>, locale, 'title');
+}
+
+export function getJobLocation(job: Record<string, unknown>, locale: Locale): string {
+  return pickLocale(job as Record<string, unknown>, locale, 'location');
+}
+
+export function getJobStartDate(job: Record<string, unknown>, locale: Locale): string {
+  return pickLocale(job as Record<string, unknown>, locale, 'startDate');
+}
+
 // Shared jobs data - this would come from a database in a real app
 export const jobs = [
   {
     id: 'DE2025043',
     slug: 'elektrikari-nemecko',
-    title: 'Elektrikári Nemecko',
-    location: 'Nemecko, Braunschweig',
+    titleSk: 'Elektrikári Nemecko',
+    titleEn: 'Electricians Germany',
+    titleDe: 'Elektriker Deutschland',
+    locationSk: 'Nemecko, Braunschweig',
+    locationEn: 'Germany, Braunschweig',
+    locationDe: 'Deutschland, Braunschweig',
     salary: '23-24€/hod',
-    startDate: '1.2.2026',
+    startDateSk: '1.2.2026',
+    startDateEn: '1 Feb 2026',
+    startDateDe: '1.2.2026',
     country: 'Germany',
-    profession: 'Elektrikár',
+    professionKey: 'electrician' as const,
     isOpen: true,
     description: [
       'Komplet výmena osvetlenia v priemyselných halách.',
@@ -83,45 +113,69 @@ export const jobs = [
   {
     id: 'DE2025070',
     slug: 'elektrikari-braunschweig',
-    title: 'Zabehnutá partia, šikovných elektrikárov - dvaja alebo štyria',
-    location: 'Nemecko, Braunschweig',
+    titleSk: 'Zabehnutá partia, šikovných elektrikárov - dvaja alebo štyria',
+    titleEn: 'Established team of skilled electricians - two or four',
+    titleDe: 'Eingespieltes Team von Elektrikern - zwei oder vier',
+    locationSk: 'Nemecko, Braunschweig',
+    locationEn: 'Germany, Braunschweig',
+    locationDe: 'Deutschland, Braunschweig',
     salary: '23-24€/hod',
-    startDate: '1.2.2026',
+    startDateSk: '1.2.2026',
+    startDateEn: '1 Feb 2026',
+    startDateDe: '1.2.2026',
     country: 'Germany',
-    profession: 'Elektrikár',
+    professionKey: 'electrician' as const,
     isOpen: false
   },
   {
     id: 'AT2025073',
     slug: 'elektrikari-rakusko-au',
-    title: 'Elektrikári Rakúsko Au, rekonštrukcia hotela plus prístavba novej časti hotela',
-    location: 'Rakúsko, Au, 6883',
+    titleSk: 'Elektrikári Rakúsko Au, rekonštrukcia hotela plus prístavba novej časti hotela',
+    titleEn: 'Electricians Austria Au, hotel renovation plus new section',
+    titleDe: 'Elektriker Österreich Au, Hotelrenovierung plus Neubau',
+    locationSk: 'Rakúsko, Au, 6883',
+    locationEn: 'Austria, Au, 6883',
+    locationDe: 'Österreich, Au, 6883',
     salary: '23-24€/hod',
-    startDate: '31.03.2025',
+    startDateSk: '31.03.2025',
+    startDateEn: '31 Mar 2025',
+    startDateDe: '31.03.2025',
     country: 'Austria',
-    profession: 'Elektrikár',
+    professionKey: 'electrician' as const,
     isOpen: false
   },
   {
     id: 'DE2025039',
     slug: 'elektrikari-bad-breisig',
-    title: 'Elektrikári (novostavby bytových domov)',
-    location: 'Nemecko, Bad Breisig',
+    titleSk: 'Elektrikári (novostavby bytových domov)',
+    titleEn: 'Electricians (residential new builds)',
+    titleDe: 'Elektriker (Wohnungsneubauten)',
+    locationSk: 'Nemecko, Bad Breisig',
+    locationEn: 'Germany, Bad Breisig',
+    locationDe: 'Deutschland, Bad Breisig',
     salary: '23-24€/hod',
-    startDate: 'Ihneď',
+    startDateSk: 'Ihneď',
+    startDateEn: 'Immediately',
+    startDateDe: 'Sofort',
     country: 'Germany',
-    profession: 'Elektrikár',
+    professionKey: 'electrician' as const,
     isOpen: false
   },
   {
     id: 'AT2025071',
     slug: 'elektrikari-rakusko',
-    title: 'Zabehnutú dvojica elektrikárov na zákazku do Rakúska',
-    location: 'Nemecko, Kerpen',
+    titleSk: 'Zabehnutú dvojica elektrikárov na zákazku do Rakúska',
+    titleEn: 'Established pair of electricians for Austria',
+    titleDe: 'Eingespieltes Elektriker-Duo für Österreich',
+    locationSk: 'Nemecko, Kerpen',
+    locationEn: 'Germany, Kerpen',
+    locationDe: 'Deutschland, Kerpen',
     salary: '23-24€/hod',
-    startDate: 'Čo najskôr',
+    startDateSk: 'Čo najskôr',
+    startDateEn: 'As soon as possible',
+    startDateDe: 'So schnell wie möglich',
     country: 'Austria',
-    profession: 'Elektrikár',
+    professionKey: 'electrician' as const,
     isOpen: false
   }
 ];

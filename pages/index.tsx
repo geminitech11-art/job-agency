@@ -61,7 +61,7 @@ export default function HomePage({ locale }: { locale: string }) {
           <div className="absolute inset-0">
             <Image
               src="/electrician-working.jpg"
-              alt="Electrician working on electrical panel"
+              alt={t('hero.imageAlt')}
               fill
               className="object-cover object-left"
               priority
@@ -75,10 +75,6 @@ export default function HomePage({ locale }: { locale: string }) {
           <div className="absolute bottom-8 right-8 bg-gray-900 rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-transform">
             <Link href="/jobs" className="flex items-center gap-4 text-white">
               <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-semibold text-gray-400 uppercase">{t('hero.current.title')}</span>
-                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                </div>
                 <div className="text-4xl md:text-5xl font-bold mb-1">
                   {openJobsCount}
                 </div>

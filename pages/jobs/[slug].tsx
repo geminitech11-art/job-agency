@@ -1,13 +1,14 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { GetStaticPropsContext } from 'next';
-import { jobs } from '../../lib/jobs';
+import { jobs, getJobTitle, getJobLocation, getJobStartDate, type Locale } from '../../lib/jobs';
 import { locales } from '../../i18n';
 import { useState } from 'react';
 
-export default function JobDetailPage({ job, locale }: { job: any, locale: string }) {
+export default function JobDetailPage({ job, locale }: { job: any; locale: string }) {
   const t = useTranslations('jobDetail');
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const loc = (locale || 'en') as Locale;
 
   if (!job) {
     return <div>Job not found</div>;
@@ -64,7 +65,7 @@ export default function JobDetailPage({ job, locale }: { job: any, locale: strin
               {t('breadcrumb.jobs')}
             </Link>
             <span className="text-gray-400">/</span>
-            <span className="text-gray-900">{job.title}</span>
+            <span className="text-gray-900">{getJobTitle(job, loc)}</span>
           </nav>
         </div>
       </div>
@@ -76,7 +77,7 @@ export default function JobDetailPage({ job, locale }: { job: any, locale: strin
             {/* Job Header */}
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                {job.title}
+                {getJobTitle(job, loc)}
               </h1>
 
               {/* Description List */}
@@ -93,13 +94,13 @@ export default function JobDetailPage({ job, locale }: { job: any, locale: strin
               <div className="bg-white rounded-lg shadow-md p-6 mb-8">
                 <div className="flex items-center gap-3 mb-6">
                   <span className="text-3xl">{getCountryFlag(job.country)}</span>
-                  <span className="text-xl font-semibold text-gray-700">{job.location}</span>
+                  <span className="text-xl font-semibold text-gray-700">{getJobLocation(job, loc)}</span>
                 </div>
                 <div className="text-lg font-semibold text-gray-900 mb-6">
                   {t('team')}
                 </div>
                 <hr className="mb-6 border-gray-200" />
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <div className="text-sm text-gray-500 mb-2">{t('salary')}</div>
@@ -107,12 +108,14 @@ export default function JobDetailPage({ job, locale }: { job: any, locale: strin
                   </div>
                   <div>
                     <div className="text-sm text-gray-500 mb-2">{t('startDate')}</div>
-                    <div className="text-2xl font-bold text-gray-900">{job.startDate}</div>
+                    <div className="text-2xl font-bold text-gray-900">{getJobStartDate(job, loc)}</div>
                   </div>
-                  <div>
-                    <div className="text-sm text-gray-500 mb-2">{t('contractType')}</div>
-                    <div className="text-xl font-semibold text-gray-900">{job.contractType}</div>
-                  </div>
+                  {job.contractType && (
+                    <div>
+                      <div className="text-sm text-gray-500 mb-2">{t('contractType')}</div>
+                      <div className="text-xl font-semibold text-gray-900">{job.contractType}</div>
+                    </div>
+                  )}
                 </div>
 
                 <Link

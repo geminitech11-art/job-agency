@@ -2,25 +2,25 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { jobs } from '@/lib/jobs';
+import { useTranslations } from 'next-intl';
+import { jobs, getJobTitle, getJobLocation, getJobStartDate, type Locale } from '@/lib/jobs';
 
 interface JobCarouselProps {
   locale: string;
 }
 
 export default function JobCarousel({ locale }: JobCarouselProps) {
+  const t = useTranslations('jobs');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const jobsToShow = jobs.slice(0, 5); // Show first 5 jobs
-  const visibleJobs = 3; // Number of jobs visible at once
+  const jobsToShow = jobs.slice(0, 5);
+  const visibleJobs = 3;
+  const loc = (locale || 'en') as Locale;
 
   const getCountryFlag = (country: string) => {
     return country === 'Germany' ? '🇩🇪' : '🇦🇹';
   };
 
-  // Next.js i18n automatically handles locale prefixes in Link components
-  const getLocalizedPath = useMemo(() => {
-    return (path: string) => path;
-  }, []);
+  const getLocalizedPath = useMemo(() => (path: string) => path, []);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => 
@@ -62,14 +62,15 @@ export default function JobCarousel({ locale }: JobCarouselProps) {
       <div className="overflow-hidden">
         <div className="flex gap-6">
           {jobsToShow.map((job) => {
-            const locationParts = job.location.split(',');
-            const countryName = locale === 'sk' 
+            const locationStr = getJobLocation(job, loc);
+            const locationParts = locationStr.split(',');
+            const countryName = loc === 'sk'
               ? (job.country === 'Germany' ? 'Nemecko' : 'Rakúsko')
-              : locale === 'de'
+              : loc === 'de'
               ? (job.country === 'Germany' ? 'Deutschland' : 'Österreich')
               : job.country;
             const city = locationParts.length > 1 ? locationParts[1].trim() : locationParts[0].trim();
-            
+
             return (
               <div
                 key={job.id}
@@ -78,9 +79,9 @@ export default function JobCarousel({ locale }: JobCarouselProps) {
               >
                 <Link href={getLocalizedPath(`/jobs/${job.slug}`)} className="block">
                   <div className="flex items-center gap-2 mb-4">
-                    <span 
-                      className="text-2xl flex-shrink-0" 
-                      role="img" 
+                    <span
+                      className="text-2xl flex-shrink-0"
+                      role="img"
                       aria-label={job.country}
                       style={{ fontSize: '1.5rem', lineHeight: '1', display: 'inline-block' }}
                     >
@@ -91,24 +92,20 @@ export default function JobCarousel({ locale }: JobCarouselProps) {
                     </span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-4 line-clamp-2">
-                    {job.title}
+                    {getJobTitle(job, loc)}
                   </h3>
                   <div className="border-t border-gray-200 pt-4 mb-4">
                     <div className="text-base text-gray-900 mb-2">
-                      <span className="font-semibold">
-                        {locale === 'sk' ? 'Odmena' : locale === 'de' ? 'Vergütung' : 'Salary'}: 
-                      </span>
+                      <span className="font-semibold">{t('salary')}: </span>
                       <span className="font-bold ml-2">{job.salary}</span>
                     </div>
                     <div className="text-base text-gray-900">
-                      <span className="font-semibold">
-                        {locale === 'sk' ? 'Začiatok' : locale === 'de' ? 'Start' : 'Start Date'}: 
-                      </span>
-                      <span className="font-bold ml-2">{job.startDate}</span>
+                      <span className="font-semibold">{t('startDate')}: </span>
+                      <span className="font-bold ml-2">{getJobStartDate(job, loc)}</span>
                     </div>
                   </div>
                   <div className="text-blue-600 font-semibold flex items-center gap-1 hover:text-blue-700">
-                    {locale === 'sk' ? 'Viac informácií' : locale === 'de' ? 'Mehr Informationen' : 'More Information'}
+                    {t('moreInfo')}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>

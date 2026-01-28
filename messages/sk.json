@@ -25,7 +25,8 @@
         "title": "AKTUÁLNE",
         "count": "19",
         "label": "voľných ponúk"
-      }
+      },
+      "imageAlt": "Elektrikár pracujúci na elektrickej rozvádzačke"
     },
     "title": "Váš kariérny partner",
     "subtitle": "Spájame talentovaných profesionálov s výnimočnými príležitosťami",
@@ -93,6 +94,7 @@
     },
     "current": {
       "title": "AKTUÁLNE",
+      "available": "voľných",
       "projects": "voľných projektov"
     },
     "info": {
@@ -237,6 +239,15 @@
     "countries": {
       "germany": "Nemecko",
       "austria": "Rakúsko"
+    },
+    "professions": {
+      "electrician": "Elektrikár",
+      "locksmith": "Zámočník",
+      "plumber": "Inštalatér",
+      "construction": "Stavbár",
+      "painter": "Maliar",
+      "welder": "Zvárač",
+      "other": "Iné"
     },
     "title": "Pracovné ponuky",
     "subtitle": "Všetky ponuky",

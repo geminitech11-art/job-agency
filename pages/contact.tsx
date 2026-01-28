@@ -217,12 +217,9 @@ export default function ContactPage() {
             <Link href="/jobs" className="block group">
               <div className="bg-gray-900 rounded-3xl p-8 text-white relative overflow-hidden transform hover:scale-[1.02] transition-all duration-300 shadow-xl hover:shadow-2xl">
                 <div className="relative z-10">
-                  <div className="flex items-center mb-4">
-                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider mr-3">• {t('current.title')}</span>
-                  </div>
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-5xl font-black mb-2">{openJobsCount} <span className="text-3xl font-normal text-gray-400">voľných</span></p>
+                      <p className="text-5xl font-black mb-2">{openJobsCount} <span className="text-3xl font-normal text-gray-400">{t('current.available')}</span></p>
                       <p className="text-base font-semibold text-gray-400">{t('current.projects')}</p>
                     </div>
                     <svg className="w-10 h-10 text-white flex-shrink-0 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

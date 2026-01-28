@@ -1,31 +1,28 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { useState } from 'react';
 import Link from 'next/link';
-import { jobs } from '../../lib/jobs';
+import { jobs, getJobTitle, getJobLocation, getJobStartDate, type Locale } from '../../lib/jobs';
 import { GetStaticPropsContext } from 'next';
 
 export default function JobsPage() {
   const t = useTranslations('jobs');
+  const locale = (useLocale() || 'en') as Locale;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCountry, setSelectedCountry] = useState<string>('all');
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
   const [selectedProfession, setSelectedProfession] = useState<string>('all');
 
-  // Count open jobs dynamically
   const openJobsCount = jobs.filter(job => job.isOpen).length;
-
-  // Get unique values for filters
   const countries = Array.from(new Set(jobs.map(job => job.country)));
-  const professions = Array.from(new Set(jobs.map(job => job.profession)));
+  const professionKeys = Array.from(new Set(jobs.map(job => (job as { professionKey?: string }).professionKey).filter(Boolean))) as string[];
 
-  // Filter jobs
-  let filteredJobs = jobs.filter(job => {
+  const filteredJobs = jobs.filter(job => {
     const matchesCountry = selectedCountry === 'all' || job.country === selectedCountry;
-    const matchesStatus = selectedStatus === 'all' || 
-      (selectedStatus === 'open' && job.isOpen) || 
+    const matchesStatus = selectedStatus === 'all' ||
+      (selectedStatus === 'open' && job.isOpen) ||
       (selectedStatus === 'closed' && !job.isOpen);
-    const matchesProfession = selectedProfession === 'all' || job.profession === selectedProfession;
-    
+    const pk = (job as { professionKey?: string }).professionKey;
+    const matchesProfession = selectedProfession === 'all' || pk === selectedProfession;
     return matchesCountry && matchesStatus && matchesProfession;
   });
 
@@ -129,8 +126,8 @@ export default function JobsPage() {
                 className="appearance-none pl-10 pr-10 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white cursor-pointer text-gray-700"
               >
                 <option value="all">{t('filter.allProfessions')}</option>
-                {professions.map(profession => (
-                  <option key={profession} value={profession}>{profession}</option>
+                {professionKeys.map(key => (
+                  <option key={key} value={key}>{t(`professions.${key}`)}</option>
                 ))}
               </select>
               <div className="absolute left-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
@@ -170,16 +167,16 @@ export default function JobsPage() {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <span 
-                        className="text-3xl flex-shrink-0" 
-                        role="img" 
+                      <span
+                        className="text-3xl flex-shrink-0"
+                        role="img"
                         aria-label={job.country}
                         style={{ display: 'inline-block', lineHeight: '1' }}
                       >
                         {getCountryFlag(job.country)}
                       </span>
                       <span className="font-semibold text-gray-700">
-                        {job.location}
+                        {getJobLocation(job, locale)}
                       </span>
                     </div>
                     {!job.isOpen && (
@@ -189,7 +186,7 @@ export default function JobsPage() {
                     )}
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-4 line-clamp-2">
-                    {job.title}
+                    {getJobTitle(job, locale)}
                   </h3>
                   <div className="space-y-2 text-sm text-gray-600 mb-4">
                     <div>
@@ -198,7 +195,7 @@ export default function JobsPage() {
                     </div>
                     <div>
                       <span className="font-semibold">{t('startDate')}: </span>
-                      <span>{job.startDate}</span>
+                      <span>{getJobStartDate(job, locale)}</span>
                     </div>
                   </div>
                   <div className={`px-4 py-2 rounded-lg font-semibold text-center transition-colors ${

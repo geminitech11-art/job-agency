@@ -25,7 +25,8 @@
         "title": "AKTUELL",
         "count": "19",
         "label": "offene Stellen"
-      }
+      },
+      "imageAlt": "Elektriker bei der Arbeit an einer Elektroverteilung"
     },
     "title": "Ihr Karrierepartner",
     "subtitle": "Wir verbinden talentierte Fachkräfte mit außergewöhnlichen Möglichkeiten",
@@ -101,6 +102,7 @@
     },
     "current": {
       "title": "AKTUELL",
+      "available": "verfügbar",
       "projects": "offene Projekte"
     },
     "info": {
@@ -245,6 +247,15 @@
     "countries": {
       "germany": "Deutschland",
       "austria": "Österreich"
+    },
+    "professions": {
+      "electrician": "Elektriker",
+      "locksmith": "Schlosser",
+      "plumber": "Installateur",
+      "construction": "Bauarbeiter",
+      "painter": "Maler",
+      "welder": "Schweißer",
+      "other": "Andere"
     },
     "title": "Stellenangebote",
     "subtitle": "Alle Angebote",

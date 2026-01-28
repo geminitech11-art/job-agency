@@ -1,0 +1,9 @@
+# Next.js on Netlify (OpenNext adapter – zero config)
+# Do NOT set "publish" — Netlify uses serverless + CDN for Next.js.
+
+[build]
+  command = "npm run build"
+
+# Optional: ensure Netlify uses Next.js runtime (usually auto-detected)
+# [[plugins]]
+#   package = "@netlify/plugin-nextjs"

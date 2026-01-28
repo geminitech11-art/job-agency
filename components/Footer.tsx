@@ -8,11 +8,13 @@ export default function Footer() {
   const t = useTranslations('footer');
   const locale = useLocale();
 
+  // For Pages Router with Next.js i18n, Link component automatically handles locale
   const getLocalizedPath = useMemo(() => {
     return (path: string) => {
-      return `/${locale}${path}`;
+      // Next.js i18n automatically adds locale prefix to links
+      return path;
     };
-  }, [locale]);
+  }, []);
 
   return (
     <footer className="bg-gray-900 text-white relative overflow-hidden">

@@ -2,25 +2,32 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/router';
 import { useState, useMemo } from 'react';
 import TopBar from './TopBar';
 
 export default function Navigation() {
   const t = useTranslations('nav');
   const locale = useLocale();
-  const pathname = usePathname();
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // For Pages Router with Next.js i18n, router.locale is automatically handled
+  // Links should be relative - Next.js will add locale prefix automatically
   const getLocalizedPath = useMemo(() => {
     return (path: string) => {
-      return `/${locale}${path}`;
+      // Next.js i18n automatically adds locale prefix, so just return the path
+      return path;
     };
-  }, [locale]);
+  }, []);
 
   const switchLocale = (newLocale: string) => {
-    const pathWithoutLocale = pathname?.replace(`/${locale}`, '') || '/';
-    window.location.href = `/${newLocale}${pathWithoutLocale}`;
+    // Get current path and switch locale
+    const path = router.asPath || '/';
+    // Remove current locale prefix if present
+    const pathWithoutLocale = path.replace(/^\/(en|sk|de)/, '') || '/';
+    // Use router.push with locale option
+    router.push(pathWithoutLocale, pathWithoutLocale, { locale: newLocale });
   };
 
   const navItems = [
@@ -31,7 +38,7 @@ export default function Navigation() {
   ];
 
   const isActive = (href: string) => {
-    return pathname?.includes(href) || false;
+    return router.asPath?.includes(href) || false;
   };
 
   return (

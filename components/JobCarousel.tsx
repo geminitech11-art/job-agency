@@ -17,12 +17,10 @@ export default function JobCarousel({ locale }: JobCarouselProps) {
     return country === 'Germany' ? '🇩🇪' : '🇦🇹';
   };
 
+  // Next.js i18n automatically handles locale prefixes in Link components
   const getLocalizedPath = useMemo(() => {
-    const pathFn = (path: string) => {
-      return `/${locale}${path}`;
-    };
-    return pathFn;
-  }, [locale]);
+    return (path: string) => path;
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => 

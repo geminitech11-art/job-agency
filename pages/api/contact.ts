@@ -1,17 +1,20 @@
-import { NextRequest, NextResponse } from 'next/server';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
-export async function POST(request: NextRequest) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ success: false, message: 'Method Not Allowed' });
+  }
+
   try {
-    const body = await request.json();
-    const { name, phone, email, profession, startDate, groupType } = body;
+    const { name, phone, email, profession, startDate } = req.body;
 
     // Validate required fields
-    if (!name || !phone || !email || !profession || !startDate || !groupType) {
-      return NextResponse.json(
-        { success: false, message: 'All fields are required' },
-        { status: 400 }
-      );
+    if (!name || !phone || !email || !profession || !startDate) {
+      return res.status(400).json({ success: false, message: 'All fields are required' });
     }
 
     // Create email content
@@ -24,7 +27,6 @@ Phone: ${phone}
 Email: ${email}
 Profession: ${profession}
 Start Date: ${startDate}
-Group Type: ${groupType}
 
 ---
 This email was sent from the Gemini Bau contact form.
@@ -44,13 +46,10 @@ Timestamp: ${new Date().toISOString()}
       });
       
       // Still return success to user, but log the issue
-      return NextResponse.json(
-        { 
+      return res.status(200).json({ 
           success: true, 
           message: 'Form submitted successfully. We will contact you soon.' 
-        },
-        { status: 200 }
-      );
+        });
     }
 
     // Create transporter for Gmail
@@ -73,21 +72,15 @@ Timestamp: ${new Date().toISOString()}
 
     console.log('Email sent successfully to geminitech11@gmail.com');
 
-    return NextResponse.json(
-      { 
+    return res.status(200).json({ 
         success: true, 
         message: 'Form submitted successfully. We will contact you soon.' 
-      },
-      { status: 200 }
-    );
+      });
   } catch (error) {
     console.error('Error processing contact form:', error);
-    return NextResponse.json(
-      { 
+    return res.status(500).json({ 
         success: false, 
         message: 'An error occurred. Please try again later.' 
-      },
-      { status: 500 }
-    );
+      });
   }
 }

@@ -1,21 +1,8 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { locales } from '@/i18n';
+import { useTranslations } from 'next-intl';
+import { GetStaticPropsContext } from 'next';
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
-
-export const dynamic = 'force-static';
-
-export default async function AboutPage({
-  params: { locale }
-}: {
-  params: { locale: string };
-}) {
-  // MUST be called before next-intl APIs
-  setRequestLocale(locale);
-
-  const t = await getTranslations('about');
+export default function AboutPage() {
+  const t = useTranslations('about');
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -68,3 +55,12 @@ export default async function AboutPage({
   );
 }
 
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  const messages = (await import(`../messages/${locale}.json`)).default;
+  return {
+    props: {
+      messages,
+      locale
+    }
+  };
+}

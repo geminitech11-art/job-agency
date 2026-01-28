@@ -1,27 +1,16 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getOpenJobsCount, jobs } from '@/lib/jobs';
-import FAQSection from '@/components/FAQSection';
-import JobCarousel from '@/components/JobCarousel';
-import ContactFormSection from '@/components/ContactFormSection';
-import { locales } from '@/i18n';
+import { getOpenJobsCount } from '../lib/jobs';
+import FAQSection from '../components/FAQSection';
+import JobCarousel from '../components/JobCarousel';
+import ContactFormSection from '../components/ContactFormSection';
+import { GetStaticPropsContext } from 'next';
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
-
-export const dynamic = 'force-static';
-
-export default async function HomePage({
-  params: { locale }
-}: {
-  params: { locale: string };
-}) {
-  // MUST be called before next-intl APIs
-  setRequestLocale(locale);
-
-  const t = await getTranslations('home');
+export default function HomePage({ locale }: { locale: string }) {
+  const t = useTranslations('home');
+  const tJobs = useTranslations('jobs');
+  const tJobDetail = useTranslations('jobDetail');
   const openJobsCount = getOpenJobsCount();
 
   return (
@@ -48,13 +37,13 @@ export default async function HomePage({
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Link 
-                href={`/${locale}/jobs`} 
+                href="/jobs" 
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors text-center shadow-lg"
               >
                 {t('hero.cta.primary')}
               </Link>
               <Link 
-                href={`/${locale}/about`} 
+                href="/about" 
                 className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg border-2 border-gray-900 hover:bg-gray-50 transition-colors text-center flex items-center justify-center gap-2"
               >
                 {t('hero.cta.secondary')}
@@ -84,7 +73,7 @@ export default async function HomePage({
 
           {/* Dark Overlay Box */}
           <div className="absolute bottom-8 right-8 bg-gray-900 rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-transform">
-            <Link href={`/${locale}/jobs`} className="flex items-center gap-4 text-white">
+            <Link href="/jobs" className="flex items-center gap-4 text-white">
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-xs font-semibold text-gray-400 uppercase">{t('hero.current.title')}</span>
@@ -110,13 +99,13 @@ export default async function HomePage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              {locale === 'sk' ? 'Pracovné ponuky' : locale === 'de' ? 'Stellenangebote' : 'Job Offers'}
+              {tJobs('title')}
             </h2>
             <Link
-              href={`/${locale}/jobs`}
+              href="/jobs"
               className="inline-flex items-center gap-2 border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition-colors"
             >
-              {locale === 'sk' ? 'Všetky ponuky' : locale === 'de' ? 'Alle Angebote' : 'All Offers'}
+              {tJobs('subtitle')}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -131,7 +120,7 @@ export default async function HomePage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              {locale === 'sk' ? 'Výhody spolupráce s Gemini Bau' : locale === 'de' ? 'Vorteile der Zusammenarbeit mit Gemini Bau' : 'Benefits of cooperation with Gemini Bau'}
+              {tJobDetail('benefits.title')}
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -202,3 +191,13 @@ export default async function HomePage({
     </div>
   );
 }
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+    const messages = (await import(`../messages/${locale}.json`)).default;
+    return {
+      props: {
+        messages,
+        locale
+      }
+    };
+  }

@@ -229,12 +229,18 @@
       "button": "Filter",
       "country": "Krajina",
       "location": "Lokalita",
-      "profession": "Profesia"
+      "profession": "Profesia",
+      "allCountries": "Všetky krajiny",
+      "allPositions": "Všetky pozície",
+      "allProfessions": "Všetky profesie"
+    },
+    "countries": {
+      "germany": "Nemecko",
+      "austria": "Rakúsko"
     },
     "title": "Pracovné ponuky",
     "subtitle": "Všetky ponuky",
     "search": "Hľadať prácu...",
-    "filter": "Filtrovať podľa kategórie",
     "noJobs": "Momentálne nie sú k dispozícii žiadne ponuky práce. Skúste to prosím neskôr.",
     "apply": "Aplikovať teraz",
     "details": "Zobraziť detaily",

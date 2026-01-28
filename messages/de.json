@@ -237,12 +237,18 @@
       "button": "Filter",
       "country": "Land",
       "location": "Standort",
-      "profession": "Beruf"
+      "profession": "Beruf",
+      "allCountries": "Alle Länder",
+      "allPositions": "Alle Positionen",
+      "allProfessions": "Alle Berufe"
+    },
+    "countries": {
+      "germany": "Deutschland",
+      "austria": "Österreich"
     },
     "title": "Stellenangebote",
     "subtitle": "Alle Angebote",
     "search": "Stellen suchen...",
-    "filter": "Nach Kategorie filtern",
     "noJobs": "Derzeit sind keine Stellen verfügbar. Bitte schauen Sie später wieder vorbei.",
     "apply": "Jetzt bewerben",
     "details": "Details anzeigen",

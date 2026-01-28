@@ -1,112 +1,17 @@
-'use client';
-
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { useState, useMemo } from 'react';
+import { GetStaticPropsContext } from 'next';
+import { jobs } from '../../lib/jobs';
+import { locales } from '../../i18n';
+import { useState } from 'react';
 
-export const dynamic = 'force-dynamic';
-
-// This would come from a database in a real app
-const jobs: Record<string, any> = {
-  'elektrikari-nemecko': {
-    id: 'DE2025043',
-    title: 'Elektrikári Nemecko',
-    location: 'Nemecko, Braunschweig',
-    country: 'Germany',
-    salary: '23-24€/hod',
-    startDate: '1.2.2026',
-    contractType: 'Živnosť',
-    description: [
-      'Komplet výmena osvetlenia v priemyselných halách.',
-      'Mení sa staré osvetlenie za LED',
-      'Demontáž a montáž',
-      'Práca aj na plošine'
-    ],
-    requirements: [
-      'Potrebné vyučenie a prax v obore',
-      'Vlastné auto',
-      'Pracovné oblečenie a pracovne topánky',
-      'Jeden nemecky hovoriaci',
-      'Náradie',
-      'Preukazy na plošiny'
-    ],
-    benefits: [
-      {
-        icon: 'car',
-        title: 'Nástup už do 5 dní',
-        description: 'Naša spoločnosť ponúka komplexnú podporu a poradenstvo pred nástupom, aj počas trvania celej spolupráce.'
-      },
-      {
-        icon: 'arrows',
-        title: 'Dlhodobá spolupráca',
-        description: 'Pri obojstrannej spokojnosti pokračujete v nadväzujúcich projektoch, čo vám zaručuje nepretržitý príjem.'
-      },
-      {
-        icon: 'coins',
-        title: 'Férové ohodnotenie',
-        description: 'Vaša odmena je pravidelne vyplácaná podľa dohody a vieme poskytnúť možnosť zálohovej platby.'
-      },
-      {
-        icon: 'percent',
-        title: 'Hradené ubytovanie',
-        description: 'Ubytovanie je starostlivo vyberané tak, aby vyhovovalo vašim potrebám a umožnilo dlhodobý pobyt.'
-      }
-    ],
-    benefitsDetails: [
-      {
-        title: 'Plne hradené ubytovanie',
-        description: 'Ako jeden z mála sprostredkovateľov vám zabezpečíme plne hradené ubytovanie v súkromí, ktoré sa vždy snažíme zabezpečiť vo vzdialenosti do 30 km od miesta výkonu práce.'
-      },
-      {
-        title: 'Dobré platové podmienky',
-        description: 'Ponúkame adekvátne platové podmienky odrážajúce skúsenosti a odborné schopnosti našich spolupracovníkov. Našim cieľom je odmeňovať našich spolupracovníkov primerane a férovo.'
-      },
-      {
-        title: 'Možnosť zálohy',
-        description: 'V prípade naliehavej finančnej potreby ponúkame možnosť vyplatenia zálohy už po prvom odpracovanom týždni.'
-      },
-      {
-        title: 'Pomoc pri vybavovaní formulára PDA1',
-        description: 'Našim spolupracovníkom poskytujeme podporu pri vybavovaní formulára PDA1, ktorý je potrebný na preukázanie zabezpečenia sociálnych a zdravotných odvodov.'
-      },
-      {
-        title: 'Podpora počas celého projektu',
-        description: 'Naša podpora nekončí pri nástupe do práce. Počas celého projektu vám radi pomôžeme vyriešiť akékoľvek otázky či problémy, ktoré môžu nastať.'
-      },
-      {
-        title: 'Stabilná a dlhodobá spolupráca',
-        description: 'Dlhodobú spoluprácu sa snažíme zabezpečiť na seba nadväzujúcimi zákazkami. Predpokladom úspešnej spolupráce je spokojnosť zahraničného partnera, spoľahlivosť počas celého priebehu zákazky a samozrejme aj vaša spokojnosť.'
-      }
-    ],
-    advantages: [
-      'Splatnosť faktúry 14 pracovných dní',
-      'Výborné platové podmienky',
-      'Možnosť spolupráce na ďalších projektoch',
-      'Plne hradené ubytovanie',
-      'Možnosť zálohy po prvom týždni'
-    ]
-  }
-};
-
-export default function JobDetailPage({
-  params: { slug, locale }
-}: {
-  params: { slug: string; locale: string };
-}) {
+export default function JobDetailPage({ job, locale }: { job: any, locale: string }) {
   const t = useTranslations('jobDetail');
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
-  const job = jobs[slug];
 
   if (!job) {
-    notFound();
+    return <div>Job not found</div>;
   }
-
-  const getLocalizedPath = useMemo(() => {
-    return (path: string) => {
-      return `/${locale}${path}`;
-    };
-  }, [locale]);
 
   const getCountryFlag = (country: string) => {
     return country === 'Germany' ? '🇩🇪' : '🇦🇹';
@@ -151,11 +56,11 @@ export default function JobDetailPage({
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <nav className="flex items-center space-x-2 text-sm">
-            <Link href={getLocalizedPath('/')} className="text-gray-500 hover:text-blue-600">
+            <Link href="/" className="text-gray-500 hover:text-blue-600">
               {t('breadcrumb.home')}
             </Link>
             <span className="text-gray-400">/</span>
-            <Link href={getLocalizedPath('/jobs')} className="text-gray-500 hover:text-blue-600">
+            <Link href="/jobs" className="text-gray-500 hover:text-blue-600">
               {t('breadcrumb.jobs')}
             </Link>
             <span className="text-gray-400">/</span>
@@ -175,14 +80,14 @@ export default function JobDetailPage({
               </h1>
 
               {/* Description List */}
-              <ul className="space-y-2 mb-8">
+              {job.description && <ul className="space-y-2 mb-8">
                 {job.description.map((item: string, index: number) => (
                   <li key={index} className="flex items-start">
                     <span className="text-blue-600 mr-2">•</span>
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
-              </ul>
+              </ul>}
 
               {/* Location and Details */}
               <div className="bg-white rounded-lg shadow-md p-6 mb-8">
@@ -211,7 +116,7 @@ export default function JobDetailPage({
                 </div>
 
                 <Link
-                  href={getLocalizedPath('/contact')}
+                  href="/contact"
                   className="mt-6 inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
                 >
                   {t('apply')}
@@ -220,7 +125,7 @@ export default function JobDetailPage({
             </div>
 
             {/* Benefits Section */}
-            <div>
+            {job.benefits && <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
                 {t('benefits.title')}
               </h2>
@@ -243,7 +148,7 @@ export default function JobDetailPage({
               </div>
 
               {/* Advantages List */}
-              <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+              {job.advantages && <div className="bg-white rounded-lg shadow-md p-6 mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('benefits.advantages')}</h3>
                 <ul className="space-y-3">
                   {job.advantages.map((advantage: string, index: number) => (
@@ -255,10 +160,10 @@ export default function JobDetailPage({
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div>}
 
               {/* Benefits Details */}
-              <div className="space-y-6">
+              {job.benefitsDetails && <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('benefits.details')}</h3>
                 {job.benefitsDetails.map((benefit: any, index: number) => (
                   <div key={index} className="bg-white rounded-lg shadow-md p-6">
@@ -268,11 +173,11 @@ export default function JobDetailPage({
                     <p className="text-gray-600">{benefit.description}</p>
                   </div>
                 ))}
-              </div>
-            </div>
+              </div>}
+            </div>}
 
             {/* Requirements Section */}
-            <div>
+            {job.requirements && <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
                 {t('requirements')}
               </h2>
@@ -288,7 +193,7 @@ export default function JobDetailPage({
                   </li>
                 ))}
               </ul>
-            </div>
+            </div>}
 
             {/* FAQ Section - Blue Button Style */}
             <div>
@@ -342,7 +247,7 @@ export default function JobDetailPage({
                 {t('sidebar.contact.subtitle')}
               </p>
               <Link
-                href={getLocalizedPath('/contact')}
+                href="/contact"
                 className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
               >
                 {t('apply')}
@@ -365,7 +270,7 @@ export default function JobDetailPage({
                 </div>
               </div>
               <Link
-                href={getLocalizedPath('/contact')}
+                href="/contact"
                 className="block w-full bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center mt-4"
               >
                 {t('apply')}
@@ -376,4 +281,33 @@ export default function JobDetailPage({
       </div>
     </div>
   );
+}
+
+export async function getStaticPaths() {
+    const paths = jobs.flatMap((job) => {
+        return locales.map((locale) => {
+            return {
+                params: { slug: job.slug },
+                locale,
+            };
+        });
+    });
+
+    return {
+        paths,
+        fallback: false,
+    };
+}
+
+export async function getStaticProps({ locale, params }: GetStaticPropsContext) {
+    const messages = (await import(`../../messages/${locale}.json`)).default;
+    const job = jobs.find((j) => j.slug === params?.slug);
+
+    return {
+        props: {
+            messages,
+            locale,
+            job,
+        }
+    };
 }

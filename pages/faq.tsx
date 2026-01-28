@@ -1,9 +1,7 @@
-'use client';
-
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
-
-export const dynamic = 'force-dynamic';
+import { GetStaticPropsContext } from 'next';
+import Link from 'next/link';
 
 interface FAQItem {
   question: string;
@@ -209,14 +207,24 @@ export default function FAQPage() {
           <p className="text-blue-100 mb-6">
             {t('cta.description')}
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg"
           >
             {t('cta.button')}
-          </a>
+          </Link>
         </div>
       </div>
     </div>
   );
+}
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+    const messages = (await import(`../messages/${locale}.json`)).default;
+    return {
+        props: {
+            messages,
+            locale
+        }
+    };
 }

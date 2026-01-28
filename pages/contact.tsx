@@ -1,23 +1,12 @@
-'use client';
-
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { getOpenJobsCount } from '@/lib/jobs';
-
-export const dynamic = 'force-dynamic';
+import { getOpenJobsCount } from '../lib/jobs';
+import { GetStaticPropsContext } from 'next';
 
 export default function ContactPage() {
   const t = useTranslations('contact');
-  const locale = useLocale();
-  const pathname = usePathname();
   const openJobsCount = getOpenJobsCount();
-  
-  const getLocalizedPath = (path: string) => {
-    const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
-    return `/${locale}${path}`;
-  };
 
   const [formData, setFormData] = useState({
     name: '',
@@ -225,7 +214,7 @@ export default function ContactPage() {
             </div>
 
             {/* Current Projects Card */}
-            <Link href={getLocalizedPath('/jobs')} className="block group">
+            <Link href="/jobs" className="block group">
               <div className="bg-gray-900 rounded-3xl p-8 text-white relative overflow-hidden transform hover:scale-[1.02] transition-all duration-300 shadow-xl hover:shadow-2xl">
                 <div className="relative z-10">
                   <div className="flex items-center mb-4">
@@ -251,4 +240,14 @@ export default function ContactPage() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  const messages = (await import(`../messages/${locale}.json`)).default;
+  return {
+    props: {
+      messages,
+      locale
+    }
+  };
 }

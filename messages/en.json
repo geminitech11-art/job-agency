@@ -237,12 +237,18 @@
       "button": "Filter",
       "country": "Country",
       "location": "Location",
-      "profession": "Profession"
+      "profession": "Profession",
+      "allCountries": "All Countries",
+      "allPositions": "All Positions",
+      "allProfessions": "All Professions"
+    },
+    "countries": {
+      "germany": "Germany",
+      "austria": "Austria"
     },
     "title": "Job Offers",
     "subtitle": "All offers",
     "search": "Search jobs...",
-    "filter": "Filter by category",
     "noJobs": "No jobs available at the moment. Please check back later.",
     "apply": "Apply Now",
     "details": "View Details",

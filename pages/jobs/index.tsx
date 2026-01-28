@@ -1,24 +1,15 @@
-'use client';
-
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import Link from 'next/link';
-import { jobs } from '@/lib/jobs';
-
-export const dynamic = 'force-dynamic';
+import { jobs } from '../../lib/jobs';
+import { GetStaticPropsContext } from 'next';
 
 export default function JobsPage() {
   const t = useTranslations('jobs');
-  const locale = useLocale();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCountry, setSelectedCountry] = useState<string>('all');
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
   const [selectedProfession, setSelectedProfession] = useState<string>('all');
-
-  const getLocalizedPath = (path: string) => {
-    return `/${locale}${path}`;
-  };
-
 
   // Count open jobs dynamically
   const openJobsCount = jobs.filter(job => job.isOpen).length;
@@ -48,7 +39,7 @@ export default function JobsPage() {
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <nav className="flex items-center space-x-2 text-sm">
-            <Link href={getLocalizedPath('/')} className="text-gray-500 hover:text-blue-600">
+            <Link href="/" className="text-gray-500 hover:text-blue-600">
               {t('breadcrumb.home')}
             </Link>
             <span className="text-gray-400">/</span>
@@ -68,7 +59,7 @@ export default function JobsPage() {
               {t('hero.description')}
             </p>
             <Link
-              href={getLocalizedPath('/contact')}
+              href="/contact"
               className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
             >
               {t('hero.cta')}
@@ -90,15 +81,10 @@ export default function JobsPage() {
                 onChange={(e) => setSelectedCountry(e.target.value)}
                 className="appearance-none pl-10 pr-10 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white cursor-pointer text-gray-700 min-w-[180px]"
               >
-                <option value="all">{locale === 'sk' ? 'Všetky krajiny' : locale === 'de' ? 'Alle Länder' : 'All Countries'}</option>
+                <option value="all">{t('filter.allCountries')}</option>
                 {countries.map(country => (
                   <option key={country} value={country}>
-                    {locale === 'sk' 
-                      ? (country === 'Germany' ? 'Nemecko' : 'Rakúsko')
-                      : locale === 'de'
-                      ? (country === 'Germany' ? 'Deutschland' : 'Österreich')
-                      : country
-                    }
+                    {country === 'Germany' ? t('countries.germany') : t('countries.austria')}
                   </option>
                 ))}
               </select>
@@ -120,9 +106,9 @@ export default function JobsPage() {
                 onChange={(e) => setSelectedStatus(e.target.value)}
                 className="appearance-none pl-10 pr-10 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white cursor-pointer text-gray-700"
               >
-                <option value="all">{locale === 'sk' ? 'Všetky pozície' : locale === 'de' ? 'Alle Positionen' : 'All Positions'}</option>
-                <option value="open">{locale === 'sk' ? 'Otvorené' : locale === 'de' ? 'Offen' : 'Open'}</option>
-                <option value="closed">{locale === 'sk' ? 'Zatvorené' : locale === 'de' ? 'Geschlossen' : 'Closed'}</option>
+                <option value="all">{t('filter.allPositions')}</option>
+                <option value="open">{t('open')}</option>
+                <option value="closed">{t('closed')}</option>
               </select>
               <div className="absolute left-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
                 <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,7 +128,7 @@ export default function JobsPage() {
                 onChange={(e) => setSelectedProfession(e.target.value)}
                 className="appearance-none pl-10 pr-10 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white cursor-pointer text-gray-700"
               >
-                <option value="all">{locale === 'sk' ? 'Všetky profesie' : locale === 'de' ? 'Alle Berufe' : 'All Professions'}</option>
+                <option value="all">{t('filter.allProfessions')}</option>
                 {professions.map(profession => (
                   <option key={profession} value={profession}>{profession}</option>
                 ))}
@@ -174,7 +160,7 @@ export default function JobsPage() {
             {filteredJobs.map((job) => (
               <Link 
                 key={job.id}
-                href={getLocalizedPath(`/jobs/${job.slug}`)}
+                href={`/jobs/${job.slug}`}
                 className={`block bg-white rounded-t-xl shadow-md transition-shadow border-2 ${
                   job.isOpen
                     ? 'border-blue-600 hover:shadow-xl'
@@ -230,4 +216,14 @@ export default function JobsPage() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+    const messages = (await import(`../../messages/${locale}.json`)).default;
+    return {
+        props: {
+            messages,
+            locale
+        }
+    };
 }

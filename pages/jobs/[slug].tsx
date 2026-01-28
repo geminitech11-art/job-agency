@@ -300,13 +300,21 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ locale, params }: GetStaticPropsContext) {
-    const messages = (await import(`../../messages/${locale}.json`)).default;
+    const currentLocale = locale || 'en';
+    const messages = (await import(`../../messages/${currentLocale}.json`)).default;
     const job = jobs.find((j) => j.slug === params?.slug);
+
+    // Return 404 if job not found
+    if (!job) {
+        return {
+            notFound: true,
+        };
+    }
 
     return {
         props: {
             messages,
-            locale,
+            locale: currentLocale,
             job,
         }
     };

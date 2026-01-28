@@ -19,11 +19,12 @@ export default function ProjectsPage() {
 }
 
 export async function getStaticProps({ locale }: GetStaticPropsContext) {
-  const messages = (await import(`../messages/${locale}.json`)).default;
+  const currentLocale = locale || 'en';
+  const messages = (await import(`../messages/${currentLocale}.json`)).default;
   return {
     props: {
       messages,
-      locale
+      locale: currentLocale
     }
   };
 }

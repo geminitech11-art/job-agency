@@ -1,27 +1,25 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { defaultLocale } from '../i18n';
 import { GetStaticPropsContext } from 'next';
 
-export default function Custom500() {
-  const router = useRouter();
-  const locale = (router.locale as string) || defaultLocale;
+export default function Custom500({ locale }: { locale: string }) {
+  const currentLocale = locale || defaultLocale;
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-md w-full text-center">
         <h1 className="text-6xl font-bold text-gray-900 mb-4">500</h1>
         <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-          {locale === 'sk'
+          {currentLocale === 'sk'
             ? 'Chyba servera'
-            : locale === 'de'
+            : currentLocale === 'de'
             ? 'Serverfehler'
             : 'Server Error'}
         </h2>
         <p className="text-gray-600 mb-8">
-          {locale === 'sk'
+          {currentLocale === 'sk'
             ? 'Ospravedlňujeme sa za nepríjemnosti. Skúste to znova neskôr.'
-            : locale === 'de'
+            : currentLocale === 'de'
             ? 'Entschuldigung für die Unannehmlichkeiten. Bitte versuchen Sie es später erneut.'
             : 'Sorry for the inconvenience. Please try again later.'}
         </p>
@@ -29,7 +27,7 @@ export default function Custom500() {
           href="/"
           className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
         >
-          {locale === 'sk' ? 'Späť na domov' : locale === 'de' ? 'Zurück zur Startseite' : 'Back to Home'}
+          {currentLocale === 'sk' ? 'Späť na domov' : currentLocale === 'de' ? 'Zurück zur Startseite' : 'Back to Home'}
         </Link>
       </div>
     </div>

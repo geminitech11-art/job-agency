@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
-import { GetStaticPropsContext } from 'next';
+import { GetServerSidePropsContext } from 'next';
 import Link from 'next/link';
 
 interface FAQItem {
@@ -219,13 +219,13 @@ export default function FAQPage() {
   );
 }
 
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-    const currentLocale = locale || 'en';
-    const messages = (await import(`../messages/${currentLocale}.json`)).default;
-    return {
-        props: {
-            messages,
-            locale: currentLocale
-        }
-    };
+export async function getServerSideProps({ locale }: GetServerSidePropsContext) {
+  const currentLocale = locale || 'en';
+  const messages = (await import(`../messages/${currentLocale}.json`)).default;
+  return {
+    props: {
+      messages,
+      locale: currentLocale
+    }
+  };
 }

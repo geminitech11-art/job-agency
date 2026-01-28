@@ -5,7 +5,7 @@ import { getOpenJobsCount } from '../lib/jobs';
 import FAQSection from '../components/FAQSection';
 import JobCarousel from '../components/JobCarousel';
 import ContactFormSection from '../components/ContactFormSection';
-import { GetStaticPropsContext } from 'next';
+import { GetServerSidePropsContext } from 'next';
 
 export default function HomePage({ locale }: { locale: string }) {
   const t = useTranslations('home');
@@ -188,13 +188,13 @@ export default function HomePage({ locale }: { locale: string }) {
   );
 }
 
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-    const currentLocale = locale || 'en';
-    const messages = (await import(`../messages/${currentLocale}.json`)).default;
-    return {
-      props: {
-        messages,
-        locale: currentLocale
-      }
-    };
-  }
+export async function getServerSideProps({ locale }: GetServerSidePropsContext) {
+  const currentLocale = locale || 'en';
+  const messages = (await import(`../messages/${currentLocale}.json`)).default;
+  return {
+    props: {
+      messages,
+      locale: currentLocale
+    }
+  };
+}

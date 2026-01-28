@@ -2,7 +2,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { useState } from 'react';
 import Link from 'next/link';
 import { jobs, getJobTitle, getJobLocation, getJobStartDate, type Locale } from '../../lib/jobs';
-import { GetStaticPropsContext } from 'next';
+import { GetServerSidePropsContext } from 'next';
 
 export default function JobsPage() {
   const t = useTranslations('jobs');
@@ -215,13 +215,13 @@ export default function JobsPage() {
   );
 }
 
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
-    const currentLocale = locale || 'en';
-    const messages = (await import(`../../messages/${currentLocale}.json`)).default;
-    return {
-        props: {
-            messages,
-            locale: currentLocale
-        }
-    };
+export async function getServerSideProps({ locale }: GetServerSidePropsContext) {
+  const currentLocale = locale || 'en';
+  const messages = (await import(`../../messages/${currentLocale}.json`)).default;
+  return {
+    props: {
+      messages,
+      locale: currentLocale
+    }
+  };
 }

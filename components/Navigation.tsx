@@ -34,7 +34,7 @@ export default function Navigation() {
     { href: '/jobs', label: t('jobs') },
     { href: '/faq', label: t('faq') },
     { href: '/contact', label: t('contact') },
-    { href: '/about', label: t('about') },
+    { href: '/about', label: t('about') }
   ];
 
   const isActive = (href: string) => {

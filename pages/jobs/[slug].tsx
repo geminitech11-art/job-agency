@@ -1,8 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { GetStaticPropsContext } from 'next';
+import { GetServerSidePropsContext } from 'next';
 import { jobs, getJobTitle, getJobLocation, getJobStartDate, type Locale } from '../../lib/jobs';
-import { locales } from '../../i18n';
 import { useState } from 'react';
 
 export default function JobDetailPage({ job, locale }: { job: any; locale: string }) {
@@ -286,39 +285,22 @@ export default function JobDetailPage({ job, locale }: { job: any; locale: strin
   );
 }
 
-export async function getStaticPaths() {
-    const paths = jobs.flatMap((job) => {
-        return locales.map((locale) => {
-            return {
-                params: { slug: job.slug },
-                locale,
-            };
-        });
-    });
+export async function getServerSideProps({ locale, params }: GetServerSidePropsContext) {
+  const currentLocale = locale || 'en';
+  const messages = (await import(`../../messages/${currentLocale}.json`)).default;
+  const slug = params?.slug;
+  const slugStr = Array.isArray(slug) ? slug[0] : slug;
+  const job = slugStr ? jobs.find((j) => j.slug === slugStr) : undefined;
 
-    return {
-        paths,
-        fallback: false,
-    };
-}
+  if (!job) {
+    return { notFound: true };
+  }
 
-export async function getStaticProps({ locale, params }: GetStaticPropsContext) {
-    const currentLocale = locale || 'en';
-    const messages = (await import(`../../messages/${currentLocale}.json`)).default;
-    const job = jobs.find((j) => j.slug === params?.slug);
-
-    // Return 404 if job not found
-    if (!job) {
-        return {
-            notFound: true,
-        };
+  return {
+    props: {
+      messages,
+      locale: currentLocale,
+      job
     }
-
-    return {
-        props: {
-            messages,
-            locale: currentLocale,
-            job,
-        }
-    };
+  };
 }

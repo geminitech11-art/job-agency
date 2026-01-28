@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { GetStaticPropsContext } from 'next';
+import { GetServerSidePropsContext } from 'next';
 
 export default function ProjectsPage() {
   const t = useTranslations('nav');
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
   );
 }
 
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
+export async function getServerSideProps({ locale }: GetServerSidePropsContext) {
   const currentLocale = locale || 'en';
   const messages = (await import(`../messages/${currentLocale}.json`)).default;
   return {

@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import Link from 'next/link';
 import { getOpenJobsCount } from '../lib/jobs';
-import { GetStaticPropsContext } from 'next';
+import { GetServerSidePropsContext } from 'next';
 
 export default function ContactPage() {
   const t = useTranslations('contact');
@@ -239,7 +239,7 @@ export default function ContactPage() {
   );
 }
 
-export async function getStaticProps({ locale }: GetStaticPropsContext) {
+export async function getServerSideProps({ locale }: GetServerSidePropsContext) {
   const currentLocale = locale || 'en';
   const messages = (await import(`../messages/${currentLocale}.json`)).default;
   return {

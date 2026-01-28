@@ -7,7 +7,7 @@ import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   // Ensure locale and messages are always defined
-  // For Pages Router, pageProps.locale should be provided by getStaticProps
+  // For Pages Router, pageProps.locale should be provided by getServerSideProps/getStaticProps
   // If not (e.g., error pages), use defaultLocale and empty messages
   const locale = (pageProps.locale as string | undefined) || defaultLocale;
   

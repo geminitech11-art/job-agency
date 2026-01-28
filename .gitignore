@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# app router (we use pages-only; avoid committing app/)
+/app/
+
 # production
 /build
 
